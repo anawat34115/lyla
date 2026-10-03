@@ -1,0 +1,1865 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LYRA SUPREME SPA — ร้านนวด พริตตี้สปา สปาสำหรับผู้ชาย ลาดพร้าว 71</title>
+  <meta name="description" content="LYRA SUPREME SPA สปาสำหรับผู้ชาย นวดผ่อนคลาย พริตตี้สปาสุดเอ็กซ์คลูซีฟ พร้อมห้องคาราโอเกะเลานจ์ ลายแทงลาดพร้าว 71 ใกล้เลียบด่วนเอกมัย–รามอินทรา ที่จอดรถ 30+ คัน">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="LYRA SUPREME SPA — นวดผ่อนคลาย สปาสำหรับผู้ชาย ลาดพร้าว 71">
+  <meta property="og:description" content="พื้นที่พักผ่อนส่วนตัวสำหรับสุภาพบุรุษ นวดอโรมา พริตตี้สปา คาราโอเกะ เลานจ์ ลาดพร้าว 71">
+  <meta property="og:image" content="images/pazo-models-hero.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Prompt (Pazo Exact), Cinzel (Luxury Serif Caps), Cormorant Garamond -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Prompt:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       8PX GRID TOKENS & PAZO SPA COLOR SYSTEM
+       ========================================================= */
+    :root {
+      /* 8px Spacing Grid System */
+      --s1: 8px;
+      --s2: 16px;
+      --s3: 24px;
+      --s4: 32px;
+      --s5: 40px;
+      --s6: 48px;
+      --s7: 56px;
+      --s8: 64px;
+      --s10: 80px;
+      --s12: 96px;
+      --s16: 128px;
+
+      /* Pazo Authentic Palette */
+      --pazo-nav-top: #3b1408;
+      --pazo-nav-bot: #260d05;
+      --pazo-bg-dark: #0e0705;
+      --pazo-bg-card: rgba(22, 10, 6, 0.78);
+      --pazo-border: rgba(255, 255, 255, 0.22);
+      --pazo-border-gold: rgba(212, 175, 55, 0.45);
+      --pazo-gold: #e5a93c;
+      --pazo-gold-light: #f5cf7a;
+      --pazo-text-main: #ffffff;
+      --pazo-text-muted: #e0d4cc;
+      --pazo-cta-bg: #ffffff;
+      --pazo-cta-text: #1a0a05;
+      --pazo-phone: #9e3915;
+      --pazo-line: #06c755;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--pazo-bg-dark);
+      color: var(--pazo-text-main);
+      font-family: 'Prompt', sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* Container */
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: var(--s3);
+      padding-right: var(--s3);
+    }
+
+    /* =========================================================
+       HEADER / NAVBAR (Pazo Style Deep Mahogany Bar)
+       ========================================================= */
+    #site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      background: linear-gradient(180deg, var(--pazo-nav-top) 0%, var(--pazo-nav-bot) 100%);
+      border-bottom: 1px solid rgba(229, 169, 60, 0.25);
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.6);
+      height: var(--s8);
+      display: flex;
+      align-items: center;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .brand-logo {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+      padding-right: var(--s3);
+    }
+
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      color: #ffffff;
+      line-height: 1;
+    }
+
+    .brand-subtitle {
+      font-family: 'Cinzel', serif;
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.26em;
+      color: var(--pazo-gold-light);
+      text-transform: uppercase;
+    }
+
+    .main-nav {
+      display: none;
+      align-items: center;
+      gap: var(--s4);
+    }
+
+    @media (min-width: 992px) {
+      .main-nav {
+        display: flex;
+      }
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 400;
+      color: #f0e8e2;
+      position: relative;
+      padding: var(--s1) 0;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--pazo-gold-light);
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--pazo-gold);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--s2);
+    }
+
+    /* Flag Switcher */
+    .lang-switcher {
+      display: flex;
+      align-items: center;
+      gap: var(--s1);
+      padding: 4px var(--s1);
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .flag-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      overflow: hidden;
+      opacity: 0.65;
+      transition: all 0.25s ease;
+      cursor: pointer;
+    }
+
+    .flag-btn.active {
+      opacity: 1;
+      box-shadow: 0 0 0 2px var(--pazo-gold);
+      transform: scale(1.05);
+    }
+
+    .flag-btn svg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Mobile Hamburger */
+    .hamburger-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 28px;
+      height: 20px;
+      cursor: pointer;
+    }
+
+    @media (min-width: 992px) {
+      .hamburger-btn {
+        display: none;
+      }
+    }
+
+    .hamburger-btn span {
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* =========================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================= */
+    .mobile-drawer {
+      position: fixed;
+      top: var(--s8);
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(18, 7, 3, 0.97);
+      backdrop-filter: blur(12px);
+      z-index: 99;
+      display: flex;
+      flex-direction: column;
+      padding: var(--s4) var(--s3);
+      gap: var(--s3);
+      transform: translateY(-100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .mobile-drawer.open {
+      transform: translateY(0);
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .mobile-drawer a {
+      font-size: 18px;
+      color: #ffffff;
+      padding: var(--s2) 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .mobile-drawer a:hover {
+      color: var(--pazo-gold);
+    }
+
+    /* =========================================================
+       SECTION 1: HERO (Pazo Iconic Massive Typography)
+       ========================================================= */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding-top: var(--s8);
+      background-image: url('images/pazo-models-hero.jpg');
+      background-size: cover;
+      background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, rgba(14, 7, 5, 0.45) 0%, rgba(14, 7, 5, 0.88) 100%),
+                  linear-gradient(180deg, rgba(59, 20, 8, 0.4) 0%, rgba(14, 7, 5, 0.95) 100%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 960px;
+      padding-top: var(--s8);
+      padding-bottom: var(--s8);
+    }
+
+    .hero-main-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(48px, 12vw, 136px);
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      line-height: 1;
+      color: #ffffff;
+      text-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+      margin-bottom: var(--s1);
+    }
+
+    .hero-sub-title {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(14px, 3vw, 28px);
+      font-weight: 600;
+      letter-spacing: 0.42em;
+      color: #f7ebe1;
+      text-transform: uppercase;
+      margin-bottom: var(--s5);
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.9);
+    }
+
+    .hero-desc {
+      font-size: clamp(15px, 2vw, 18px);
+      font-weight: 300;
+      color: var(--pazo-text-muted);
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: var(--s5);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--s2);
+    }
+
+    /* Pazo White Pill Button */
+    .btn-pazo-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--s6);
+      padding: 0 var(--s4);
+      background-color: var(--pazo-cta-bg);
+      color: var(--pazo-cta-text);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 9999px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      transition: all 0.3s ease;
+      text-transform: none;
+    }
+
+    .btn-pazo-white:hover {
+      background-color: #f5ece5;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(0, 0, 0, 0.6);
+      color: #000000;
+    }
+
+    .btn-pazo-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      height: var(--s6);
+      padding: 0 var(--s4);
+      background-color: transparent;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 9999px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-pazo-outline:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #ffffff;
+    }
+
+    /* Disclaimer tag */
+    .disclaimer-badge {
+      position: absolute;
+      bottom: var(--s2);
+      right: var(--s3);
+      z-index: 3;
+      font-size: 11px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.65);
+      background: rgba(0, 0, 0, 0.4);
+      padding: 4px var(--s1);
+      border-radius: 4px;
+      pointer-events: none;
+    }
+
+    /* Scroll Down Indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: var(--s4);
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--s1);
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translate(-50%, 0); }
+      40% { transform: translate(-50%, -8px); }
+      60% { transform: translate(-50%, -4px); }
+    }
+
+    /* =========================================================
+       SECTION 2: VIDEO & ATMOSPHERE SHOWCASE
+       ========================================================= */
+    #atmosphere {
+      position: relative;
+      padding-top: var(--s12);
+      padding-bottom: var(--s12);
+      background-color: #120804;
+      background-image: radial-gradient(circle at 50% 50%, rgba(59, 20, 8, 0.45) 0%, rgba(14, 7, 5, 0.98) 100%);
+      border-top: 1px solid rgba(229, 169, 60, 0.15);
+      border-bottom: 1px solid rgba(229, 169, 60, 0.15);
+    }
+
+    .video-showcase-box {
+      position: relative;
+      width: 100%;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: var(--s1);
+      overflow: hidden;
+      border: 1px solid var(--pazo-border);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.8);
+      aspect-ratio: 16 / 9;
+      background-color: #000000;
+    }
+
+    .video-showcase-bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.65);
+      transition: transform 0.6s ease;
+    }
+
+    .video-showcase-box:hover .video-showcase-bg {
+      transform: scale(1.03);
+    }
+
+    .video-overlay-center {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: var(--s3);
+      padding: var(--s4);
+      background: radial-gradient(circle at center, rgba(0, 0, 0, 0.2) 0%, rgba(14, 7, 5, 0.75) 100%);
+    }
+
+    .video-play-btn {
+      width: var(--s10);
+      height: var(--s10);
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 32px rgba(229, 169, 60, 0.6);
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .video-play-btn:hover {
+      transform: scale(1.1);
+      background: #ffffff;
+      box-shadow: 0 0 48px rgba(229, 169, 60, 0.9);
+    }
+
+    .video-play-btn svg {
+      width: 32px;
+      height: 32px;
+      fill: var(--pazo-cta-text);
+      margin-left: 4px;
+    }
+
+    .video-disclaimer-text {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    }
+
+    /* =========================================================
+       SECTION 3: ABOUT LYRA SPA ("ลายแทงลาดพร้าว 71")
+       ========================================================= */
+    #about {
+      position: relative;
+      padding-top: var(--s12);
+      padding-bottom: var(--s12);
+      background-image: url('images/private-room.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .about-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(20, 8, 4, 0.92) 0%, rgba(10, 4, 2, 0.94) 100%);
+    }
+
+    .about-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s6);
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .about-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .about-heading {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      line-height: 1.35;
+      color: #ffffff;
+      margin-bottom: var(--s3);
+    }
+
+    .about-heading em {
+      font-style: normal;
+      color: var(--pazo-gold);
+    }
+
+    .about-paragraph {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--pazo-text-muted);
+      line-height: 1.85;
+      margin-bottom: var(--s3);
+    }
+
+    .about-paragraph strong {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    .about-actions {
+      margin-top: var(--s4);
+      display: flex;
+      align-items: center;
+      gap: var(--s3);
+      flex-wrap: wrap;
+    }
+
+    .about-card-box {
+      background: var(--pazo-bg-card);
+      border: 1px solid var(--pazo-border);
+      backdrop-filter: blur(8px);
+      border-radius: var(--s1);
+      overflow: hidden;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+    }
+
+    .about-card-img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .about-card-caption {
+      padding: var(--s3);
+      text-align: center;
+      border-top: 1px solid var(--pazo-border);
+    }
+
+    .about-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: var(--s1);
+    }
+
+    .about-card-desc {
+      font-size: 13px;
+      color: var(--pazo-text-muted);
+    }
+
+    /* =========================================================
+       SECTION 4: ROOMS SHOWCASE ("ห้องนวดของเรา")
+       ========================================================= */
+    #rooms {
+      position: relative;
+      padding-top: var(--s12);
+      padding-bottom: var(--s12);
+      background-color: #100603;
+      background-image: radial-gradient(circle at center top, rgba(59, 20, 8, 0.5) 0%, rgba(14, 7, 5, 0.98) 100%);
+    }
+
+    .section-header-center {
+      text-align: center;
+      margin-bottom: var(--s8);
+      position: relative;
+      z-index: 2;
+    }
+
+    .section-main-title {
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.04em;
+      margin-bottom: var(--s2);
+    }
+
+    .section-subtitle-text {
+      font-size: 16px;
+      color: var(--pazo-text-muted);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s4);
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+      .rooms-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .room-pazo-card {
+      background: var(--pazo-bg-card);
+      border: 1px solid var(--pazo-border);
+      backdrop-filter: blur(8px);
+      border-radius: var(--s1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.35s ease;
+      cursor: pointer;
+    }
+
+    .room-pazo-card:hover {
+      border-color: var(--pazo-gold);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.7);
+    }
+
+    .room-img-wrap {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      overflow: hidden;
+      background: #000000;
+    }
+
+    .room-card-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .room-pazo-card:hover .room-card-image {
+      transform: scale(1.05);
+    }
+
+    .room-card-info {
+      padding: var(--s3);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      text-align: center;
+    }
+
+    .room-name-title {
+      font-family: 'Cinzel', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: var(--s2);
+      letter-spacing: 0.05em;
+    }
+
+    .room-desc-body {
+      font-size: 14px;
+      color: var(--pazo-text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--s3);
+    }
+
+    .room-card-btn {
+      align-self: center;
+      margin-top: auto;
+    }
+
+    /* =========================================================
+       SECTION 5: VIP LOUNGE & ENTERTAINMENT
+       ========================================================= */
+    #lounge {
+      position: relative;
+      padding-top: var(--s12);
+      padding-bottom: var(--s12);
+      background-image: url('images/karaoke-room.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .lounge-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(20, 8, 4, 0.93) 0%, rgba(12, 5, 2, 0.95) 100%);
+    }
+
+    .lounge-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s6);
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .lounge-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .lounge-left-col {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--s3);
+    }
+
+    .lounge-heading {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.35;
+    }
+
+    .lounge-desc {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--pazo-text-muted);
+      line-height: 1.8;
+    }
+
+    .lounge-right-col {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+    }
+
+    .lounge-image-card {
+      border-radius: var(--s1);
+      overflow: hidden;
+      border: 1px solid var(--pazo-border);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+    }
+
+    .lounge-box-note {
+      background: var(--pazo-bg-card);
+      border: 1px solid var(--pazo-border-gold);
+      padding: var(--s3);
+      border-radius: var(--s1);
+      font-size: 14px;
+      line-height: 1.7;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* =========================================================
+       SECTION 6: WHY US ("ทำไมต้อง LYRA SUPREME SPA")
+       ========================================================= */
+    #whyus {
+      position: relative;
+      padding-top: var(--s12);
+      padding-bottom: var(--s12);
+      background-color: #0c0503;
+      background-image: radial-gradient(circle at center, rgba(59, 20, 8, 0.4) 0%, rgba(12, 5, 2, 0.98) 100%);
+      border-top: 1px solid rgba(229, 169, 60, 0.15);
+      border-bottom: 1px solid rgba(229, 169, 60, 0.15);
+    }
+
+    .whyus-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s4);
+      margin-bottom: var(--s8);
+      position: relative;
+      z-index: 2;
+    }
+
+    @media (min-width: 768px) {
+      .whyus-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .whyus-col {
+      background: var(--pazo-bg-card);
+      border: 1px solid var(--pazo-border);
+      padding: var(--s4);
+      border-radius: var(--s1);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: var(--s2);
+      transition: all 0.3s ease;
+    }
+
+    .whyus-col:hover {
+      border-color: var(--pazo-gold);
+      transform: translateY(-4px);
+    }
+
+    .whyus-quote-icon {
+      font-family: 'Cinzel', serif;
+      font-size: 40px;
+      line-height: 1;
+      color: var(--pazo-gold);
+      opacity: 0.8;
+    }
+
+    .whyus-col-title {
+      font-size: 20px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: var(--s1);
+    }
+
+    .whyus-col-desc {
+      font-size: 14px;
+      color: var(--pazo-text-muted);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .whyus-cta-center {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* =========================================================
+       SECTION 7: CAREERS / RECRUITMENT ("ร่วมงานกับเรา")
+       ========================================================= */
+    #careers {
+      position: relative;
+      padding-top: var(--s12);
+      padding-bottom: var(--s12);
+      background-image: url('images/hero-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    .careers-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(24, 9, 4, 0.94) 0%, rgba(10, 4, 2, 0.96) 100%);
+    }
+
+    .careers-top-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s6);
+      align-items: center;
+      margin-bottom: var(--s8);
+    }
+
+    @media (min-width: 992px) {
+      .careers-top-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+    }
+
+    .careers-heading {
+      font-size: clamp(28px, 4vw, 42px);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.35;
+      margin-bottom: var(--s3);
+    }
+
+    .careers-desc {
+      font-size: 15px;
+      color: var(--pazo-text-muted);
+      line-height: 1.8;
+      margin-bottom: var(--s4);
+    }
+
+    .careers-perks-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s3);
+      position: relative;
+      z-index: 2;
+      margin-bottom: var(--s8);
+    }
+
+    @media (min-width: 768px) {
+      .careers-perks-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .career-perk-card {
+      background: var(--pazo-bg-card);
+      border: 1px solid var(--pazo-border);
+      padding: var(--s3);
+      border-radius: var(--s1);
+      font-size: 14px;
+      color: var(--pazo-text-muted);
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    /* Pazo Stitched Golden Dashed Banner */
+    .pazo-stitched-banner {
+      position: relative;
+      z-index: 2;
+      border: 2px dashed var(--pazo-gold);
+      border-radius: var(--s2);
+      padding: var(--s6) var(--s4);
+      background: rgba(35, 14, 6, 0.8);
+      backdrop-filter: blur(8px);
+      text-align: center;
+      max-width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .banner-subtag {
+      font-size: 16px;
+      color: var(--pazo-gold);
+      font-weight: 500;
+      margin-bottom: var(--s1);
+    }
+
+    .banner-big-text {
+      font-size: clamp(32px, 6vw, 64px);
+      font-weight: 800;
+      color: #ffde59;
+      line-height: 1.2;
+      margin-bottom: var(--s3);
+      text-shadow: 0 4px 16px rgba(0, 0, 0, 0.8);
+    }
+
+    .banner-tags-row {
+      display: flex;
+      justify-content: center;
+      gap: var(--s4);
+      flex-wrap: wrap;
+      margin-bottom: var(--s3);
+    }
+
+    .banner-pill-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px var(--s3);
+      border-radius: 9999px;
+      border: 1px solid var(--pazo-gold);
+      color: #ffffff;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.3);
+    }
+
+    .banner-disclaimer {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* =========================================================
+       SECTION 8: CONTACT US & MAP ("ติดต่อเรา")
+       ========================================================= */
+    #contact {
+      position: relative;
+      padding-top: var(--s12);
+      padding-bottom: var(--s12);
+      background-image: url('images/pazo-models-hero.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .contact-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(20, 8, 4, 0.92) 0%, rgba(12, 5, 2, 0.96) 100%);
+    }
+
+    .contact-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s6);
+      align-items: center;
+    }
+
+    @media (min-width: 992px) {
+      .contact-grid {
+        grid-template-columns: 1fr 1.2fr;
+      }
+    }
+
+    .contact-card-box {
+      background: var(--pazo-bg-card);
+      border: 1px solid var(--pazo-border);
+      backdrop-filter: blur(10px);
+      border-radius: var(--s1);
+      padding: var(--s5);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s3);
+    }
+
+    .contact-title {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    .contact-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+      font-size: 15px;
+      color: var(--pazo-text-muted);
+      border-top: 1px solid rgba(255, 255, 255, 0.15);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding: var(--s3) 0;
+    }
+
+    .contact-item-row {
+      display: flex;
+      gap: var(--s2);
+    }
+
+    .contact-item-label {
+      font-weight: 600;
+      color: #ffffff;
+      min-width: 96px;
+    }
+
+    .contact-item-value {
+      color: var(--pazo-text-muted);
+    }
+
+    /* Map Box */
+    .map-embed-wrapper {
+      border-radius: var(--s1);
+      overflow: hidden;
+      border: 1px solid var(--pazo-border);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.7);
+      background-color: #1a0a05;
+      height: 380px;
+      position: relative;
+    }
+
+    .map-embed-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      filter: invert(90%) hue-rotate(180deg) brightness(85%) contrast(90%);
+    }
+
+    .map-floating-card {
+      position: absolute;
+      top: var(--s2);
+      left: var(--s2);
+      background: rgba(18, 7, 3, 0.92);
+      border: 1px solid var(--pazo-border);
+      padding: var(--s2) var(--s3);
+      border-radius: 4px;
+      max-width: 280px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .map-card-name {
+      font-size: 14px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+
+    .map-card-addr {
+      font-size: 12px;
+      color: var(--pazo-text-muted);
+    }
+
+    /* =========================================================
+       FOOTER (Pazo Minimal Dark Bottom Bar)
+       ========================================================= */
+    #site-footer {
+      background: #080302;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: var(--s4);
+      padding-bottom: var(--s4);
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--s3);
+      margin-bottom: var(--s2);
+    }
+
+    .footer-links a:hover {
+      color: var(--pazo-gold);
+    }
+
+    /* =========================================================
+       FLOATING ACTION BUTTONS (Bottom Right: Phone & LINE)
+       ========================================================= */
+    .floating-actions {
+      position: fixed;
+      bottom: var(--s3);
+      right: var(--s3);
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s2);
+    }
+
+    .float-btn {
+      width: var(--s7);
+      height: var(--s7);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+
+    .float-btn:hover {
+      transform: scale(1.1) translateY(-4px);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.7);
+    }
+
+    .float-phone {
+      background-color: var(--pazo-phone);
+    }
+
+    .float-line {
+      background-color: var(--pazo-line);
+    }
+
+    .float-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: #ffffff;
+    }
+
+    /* =========================================================
+       MODALS (Profile / Video Preview)
+       ========================================================= */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--s3);
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-box {
+      background: #180905;
+      border: 1px solid var(--pazo-border-gold);
+      border-radius: var(--s1);
+      width: 100%;
+      max-width: 640px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.9);
+      position: relative;
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--s3) var(--s4);
+      background: var(--pazo-nav-top);
+      border-bottom: 1px solid rgba(229, 169, 60, 0.3);
+    }
+
+    .modal-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .modal-close-btn {
+      color: #ffffff;
+      font-size: 24px;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      padding: var(--s4);
+      display: flex;
+      flex-direction: column;
+      gap: var(--s3);
+      text-align: center;
+    }
+
+    .modal-body img {
+      border-radius: var(--s1);
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================================================
+       HEADER / NAVBAR
+       ========================================================= -->
+  <header id="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo">
+        <span class="brand-title">LYRA</span>
+        <span class="brand-subtitle">EXCLUSIVE MEN SPA</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#hero" class="nav-link active" data-th="หน้าแรก" data-en="Home">หน้าแรก</a>
+        <a href="#about" class="nav-link" data-th="เกี่ยวกับเรา" data-en="About Us">เกี่ยวกับเรา</a>
+        <a href="#rooms" class="nav-link" data-th="ห้องรับรอง" data-en="Suites">ห้องรับรอง</a>
+        <a href="#lounge" class="nav-link" data-th="ห้อง VIP เลานจ์" data-en="VIP Lounge">ห้อง VIP เลานจ์</a>
+        <a href="#whyus" class="nav-link" data-th="ทำไมต้อง LYRA" data-en="Why LYRA">ทำไมต้อง LYRA</a>
+        <a href="#careers" class="nav-link" data-th="ร่วมงานกับเรา" data-en="Careers">ร่วมงานกับเรา</a>
+        <a href="#contact" class="nav-link" data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา</a>
+      </nav>
+
+      <div class="header-actions">
+        <!-- Dual Flag Switcher (Pazo Style) -->
+        <div class="lang-switcher">
+          <button class="flag-btn active" id="btn-lang-th" title="ภาษาไทย" aria-label="Thai Language">
+            <!-- Thai Flag SVG -->
+            <svg viewBox="0 0 640 480">
+              <path fill="#a51931" d="M0 0h640v480H0z"/>
+              <path fill="#f4f5f8" d="M0 80h640v320H0z"/>
+              <path fill="#2d2a4a" d="M0 160h640v160H0z"/>
+            </svg>
+          </button>
+          <button class="flag-btn" id="btn-lang-en" title="English" aria-label="English Language">
+            <!-- US Flag SVG -->
+            <svg viewBox="0 0 640 480">
+              <path fill="#bd3d44" d="M0 0h640v480H0z"/>
+              <path stroke="#fff" stroke-width="37" d="M0 55h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/>
+              <path fill="#192f5d" d="M0 0h260v259H0z"/>
+              <circle cx="130" cy="130" r="80" fill="#ffffff" opacity="0.3"/>
+            </svg>
+          </button>
+        </div>
+
+        <button class="hamburger-btn" id="hamburger-btn" aria-label="เมนู">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="#hero" class="mobile-link" data-th="หน้าแรก" data-en="Home">หน้าแรก <span>›</span></a>
+    <a href="#about" class="mobile-link" data-th="เกี่ยวกับเรา" data-en="About Us">เกี่ยวกับเรา <span>›</span></a>
+    <a href="#rooms" class="mobile-link" data-th="ห้องรับรอง" data-en="Suites">ห้องรับรอง <span>›</span></a>
+    <a href="#lounge" class="mobile-link" data-th="ห้อง VIP เลานจ์" data-en="VIP Lounge">ห้อง VIP เลานจ์ <span>›</span></a>
+    <a href="#whyus" class="mobile-link" data-th="ทำไมต้อง LYRA" data-en="Why LYRA">ทำไมต้อง LYRA <span>›</span></a>
+    <a href="#careers" class="mobile-link" data-th="ร่วมงานกับเรา" data-en="Careers">ร่วมงานกับเรา <span>›</span></a>
+    <a href="#contact" class="mobile-link" data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา <span>›</span></a>
+    <a href="https://line.me" target="_blank" class="btn-pazo-white" style="margin-top: 16px; justify-content: center;">LINE: @LYRASPA</a>
+  </div>
+
+  <main>
+    <!-- =========================================================
+         SECTION 1: HERO
+         ========================================================= -->
+    <section id="hero">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <h1 class="hero-main-title">LYRA</h1>
+        <p class="hero-sub-title">EXCLUSIVE MEN SPA</p>
+        <p class="hero-desc" data-th="สปาส่วนตัวสำหรับสุภาพบุรุษ นวดผ่อนคลายระดับพรีเมียม สัมผัสความสุขสงบอย่างเหนือระดับใจกลางลาดพร้าว 71" data-en="Gentlemen's private sanctuary in Ladprao 71. Exceptional aroma massage, private luxury suites, and supreme discretion.">
+          สปาส่วนตัวสำหรับสุภาพบุรุษ นวดผ่อนคลายระดับพรีเมียม สัมผัสความสุขสงบอย่างเหนือระดับใจกลางลาดพร้าว 71
+        </p>
+
+        <div class="hero-actions">
+          <a href="#about" class="btn-pazo-white" data-th="ดูน้องตอนนี้" data-en="View Staff & Services">ดูน้องตอนนี้</a>
+          <a href="#rooms" class="btn-pazo-outline" data-th="ชมห้องรับรอง" data-en="Explore Suites">ชมห้องรับรอง</a>
+        </div>
+      </div>
+
+      <!-- Pazo Signature Disclaimer -->
+      <span class="disclaimer-badge" data-th="นางแบบในภาพใช้สำหรับถ่ายทำเพื่อการโฆษณาเท่านั้น" data-en="Models depicted for advertising purposes only">
+        นางแบบในภาพใช้สำหรับถ่ายทำเพื่อการโฆษณาเท่านั้น
+      </span>
+
+      <!-- Scroll Indicator -->
+      <div class="hero-scroll">
+        <span data-th="เลื่อนลง" data-en="SCROLL DOWN">เลื่อนลง</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 2: VIDEO SHOWCASE
+         ========================================================= -->
+    <section id="atmosphere">
+      <div class="container">
+        <div class="section-header-center">
+          <h2 class="section-main-title" data-th="สัมผัสบรรยากาศความหรูหรา" data-en="Experience Pure Luxury">สัมผัสบรรยากาศความหรูหรา</h2>
+          <p class="section-subtitle-text" data-th="ทุกตารางนิ้วถูกรังสรรค์ขึ้นเพื่อตอบโจทย์สุภาพบุรุษที่แสวงหาความผ่อนคลายอย่างแท้จริง" data-en="Crafted with exquisite detail for gentlemen seeking total relaxation and utmost privacy.">
+            ทุกตารางนิ้วถูกรังสรรค์ขึ้นเพื่อตอบโจทย์สุภาพบุรุษที่แสวงหาความผ่อนคลายอย่างแท้จริง
+          </p>
+        </div>
+
+        <div class="video-showcase-box" id="video-preview-trigger">
+          <img src="images/hero-bg.jpg" alt="LYRA SPA Atmosphere" class="video-showcase-bg">
+          <div class="video-overlay-center">
+            <button class="video-play-btn" id="btn-play-clip" aria-label="เล่นวิดีโอแนะนำ">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+            </button>
+            <a href="#contact" class="btn-pazo-white" data-th="ดูน้องตอนนี้" data-en="Inquire Now">ดูน้องตอนนี้</a>
+            <p class="video-disclaimer-text" data-th="คลิปนี้แสดงโดยนักแสดงเพื่อการประกอบโฆษณาเท่านั้น" data-en="Clip performed by actors for advertising demonstration only">
+              คลิปนี้แสดงโดยนักแสดงเพื่อการประกอบโฆษณาเท่านั้น
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 3: ABOUT LYRA SPA
+         ========================================================= -->
+    <section id="about">
+      <div class="about-overlay"></div>
+
+      <div class="container about-grid">
+        <div class="about-text-content">
+          <h2 class="about-heading" data-th="LYRA SUPREME SPA ร้านนวด พริตตี้สปา&lt;br&gt;นวดผ่อนคลาย สปาสำหรับผู้ชาย&lt;br&gt;ลายแทงลาดพร้าว 71 ใกล้เลียบด่วน&lt;br&gt;&lt;em&gt;ต้อง LYRA SPA เท่านั้น&lt;/em&gt;" data-en="LYRA SUPREME SPA Gentlemen's Sanctuary&lt;br&gt;Aroma Therapy &amp; Relaxing Massage&lt;br&gt;Ladprao 71 Near Pradit Manutham&lt;br&gt;&lt;em&gt;Exclusively LYRA SPA&lt;/em&gt;">
+            LYRA SUPREME SPA ร้านนวด พริตตี้สปา<br>
+            นวดผ่อนคลาย สปาสำหรับผู้ชาย<br>
+            ลายแทงลาดพร้าว 71 ใกล้เลียบด่วน<br>
+            <em>ต้อง LYRA SPA เท่านั้น</em>
+          </h2>
+
+          <p class="about-paragraph" data-th="ไม่ว่าคุณจะเป็นใครเมื่อได้มาเยือน ด้วยการต้อนรับที่อบอุ่น บริการที่เป็นเลิศ จนต้องรู้สึกประทับใจกับบรรยากาศที่เปี่ยมเสน่ห์ ได้สัมผัสกับประสบการณ์แห่งความสุขที่ไม่เหมือนใคร เป็นความรู้สึกผ่อนคลายตัดขาดจากความวุ่นวายภายนอกอย่างแท้จริง" data-en="Whoever you are, from the moment you arrive, you will be warmly welcomed by our attentive team. Experience a sanctuary of tranquility, leaving daily stress behind in an atmosphere of warmth and seductive charm.">
+            ไม่ว่าคุณจะเป็นใครเมื่อได้มาเยือน ด้วยการต้อนรับที่อบอุ่น บริการที่เป็นเลิศ จนต้องรู้สึกประทับใจกับบรรยากาศที่เปี่ยมเสน่ห์ ได้สัมผัสกับประสบการณ์แห่งความสุขที่ไม่เหมือนใคร เป็นความรู้สึกผ่อนคลายตัดขาดจากความวุ่นวายภายนอกอย่างแท้จริง
+          </p>
+
+          <p class="about-paragraph" data-th="นอกจากนี้ยังมีพื้นที่พักผ่อนที่หรูหรา ทั้ง&lt;strong&gt;ห้องนวดน้ำมันอโรมา&lt;/strong&gt;, &lt;strong&gt;ห้องจากุซซี่ส่วนตัว&lt;/strong&gt;, &lt;strong&gt;คาราโอเกะ เลานจ์&lt;/strong&gt; ล้วนถูกออกแบบมาเพื่อความเป็นส่วนตัวสูงสุด เมื่อเข้ามาแล้วคุณจะรู้สึกปล่อยวางความเครียดได้สนิทใจ พร้อมที่จอดรถในร่มรองรับกว่า 30 คัน" data-en="Our private premises offer exquisite amenities including &lt;strong&gt;Aroma Oil Suites&lt;/strong&gt;, &lt;strong&gt;Private Jacuzzi Lounges&lt;/strong&gt;, and &lt;strong&gt;VIP Karaoke Entertainment&lt;/strong&gt;, complete with over 30 secure sheltered parking spaces.">
+            นอกจากนี้ยังมีพื้นที่พักผ่อนที่หรูหรา ทั้ง<strong>ห้องนวดน้ำมันอโรมา</strong>, <strong>ห้องจากุซซี่ส่วนตัว</strong>, <strong>คาราโอเกะ เลานจ์</strong> ล้วนถูกออกแบบมาเพื่อความเป็นส่วนตัวสูงสุด เมื่อเข้ามาแล้วคุณจะรู้สึกปล่อยวางความเครียดได้สนิทใจ พร้อมที่จอดรถในร่มรองรับกว่า 30 คัน
+          </p>
+
+          <div class="about-actions">
+            <button class="btn-pazo-white" id="btn-view-models" data-th="ดูน้องตอนนี้" data-en="View Hostess Profile">ดูน้องตอนนี้</button>
+            <a href="#contact" class="btn-pazo-outline" data-th="ติดต่อสอบถาม" data-en="Contact Us">ติดต่อสอบถาม</a>
+          </div>
+        </div>
+
+        <div class="about-card-box">
+          <img src="images/LINE_ALBUM_Deluxe room_260920_2.jpg" alt="Lyra Deluxe Private Room" class="about-card-img">
+          <div class="about-card-caption">
+            <h3 class="about-card-title" data-th="ห้องนวดมาตรฐานส่วนตัว" data-en="Private Sanctuary Suite">ห้องนวดมาตรฐานส่วนตัว</h3>
+            <p class="about-card-desc" data-th="ตกแต่งด้วยโทนอบอุ่น แสงไฟถนอมสายตา และกลิ่นหอมบำบัดเฉพาะตัว" data-en="Warm ambient lighting, premium bedding, and therapeutic natural aroma essence.">
+              ตกแต่งด้วยโทนอบอุ่น แสงไฟถนอมสายตา และกลิ่นหอมบำบัดเฉพาะตัว
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 4: ROOMS SHOWCASE
+         ========================================================= -->
+    <section id="rooms">
+      <div class="container">
+        <div class="section-header-center">
+          <h2 class="section-main-title" data-th="ห้องนวดของเรา" data-en="Our Suites &amp; Rooms">ห้องนวดของเรา</h2>
+          <p class="section-subtitle-text" data-th="เลือกห้องพักผ่อนในบรรยากาศที่คุณปรารถนา ทุกห้องเน้นความเป็นส่วนตัวสูงสุด" data-en="Select your preferred sanctuary suite, each crafted for total discretion and pure tranquility.">
+            เลือกห้องพักผ่อนในบรรยากาศที่คุณปรารถนา ทุกห้องเน้นความเป็นส่วนตัวสูงสุด
+          </p>
+        </div>
+
+        <div class="rooms-grid">
+          <!-- Room 1 -->
+          <div class="room-pazo-card" onclick="openRoomModal('Standard Room', 'images/LINE_ALBUM_Deluxe room_260920_1.jpg')">
+            <div class="room-img-wrap">
+              <img src="images/LINE_ALBUM_Deluxe room_260920_1.jpg" alt="Standard Room" class="room-card-image">
+            </div>
+            <div class="room-card-info">
+              <h3 class="room-name-title">Standard Room</h3>
+              <p class="room-desc-body" data-th="ห้องพักผ่อนมาตรฐาน ดีไซน์เรียบหรู มีพื้นที่อันเงียบสงบสำหรับการพักผ่อน มีความสะดวกสบาย ภายในห้องตกแต่งอย่างลงตัว เพื่อสร้างบรรยากาศให้โรแมนติกเกินคาดหมาย เหมาะสำหรับผู้ที่ต้องการความเป็นส่วนตัว" data-en="Classic private suite featuring peaceful minimalism, luxurious bedding, ambient warm lighting, and a soothing atmosphere for deep individual relaxation.">
+                ห้องพักผ่อนมาตรฐาน ดีไซน์เรียบหรู มีพื้นที่อันเงียบสงบสำหรับการพักผ่อน มีความสะดวกสบาย ภายในห้องตกแต่งอย่างลงตัว เพื่อสร้างบรรยากาศให้โรแมนติกเกินคาดหมาย เหมาะสำหรับผู้ที่ต้องการความเป็นส่วนตัว
+              </p>
+              <button class="btn-pazo-white room-card-btn" data-th="จองห้องนี้" data-en="Reserve Room">จองห้องนี้</button>
+            </div>
+          </div>
+
+          <!-- Room 2 -->
+          <div class="room-pazo-card" onclick="openRoomModal('Deluxe Balcony Room', 'images/LINE_ALBUM_Deluxe room_260920_3.jpg')">
+            <div class="room-img-wrap">
+              <img src="images/LINE_ALBUM_Deluxe room_260920_3.jpg" alt="Deluxe Balcony Room" class="room-card-image">
+            </div>
+            <div class="room-card-info">
+              <h3 class="room-name-title">Deluxe Balcony Room</h3>
+              <p class="room-desc-body" data-th="ความพิเศษของห้องนี้คือมีพื้นที่กว้างขวางกับระเบียงส่วนตัว ที่เพิ่มความหรูหราพร้อมกับความสะดวกสบายให้กับการพักผ่อนของคุณอย่างสมบูรณ์แบบ นั่งเล่นรับลมเย็น ๆ เคลียคลอเอาใจ พร้อมชมวิวอย่างเต็มตา" data-en="Spacious luxury suite with an exclusive private outdoor balcony. Perfect for enjoying a cool breeze, warm refreshments, and undisturbed companion conversations.">
+                ความพิเศษของห้องนี้คือมีพื้นที่กว้างขวางกับระเบียงส่วนตัว ที่เพิ่มความหรูหราพร้อมกับความสะดวกสบายให้กับการพักผ่อนของคุณอย่างสมบูรณ์แบบ นั่งเล่นรับลมเย็น ๆ เคลียคลอเอาใจ พร้อมชมวิวอย่างเต็มตา
+              </p>
+              <button class="btn-pazo-white room-card-btn" data-th="จองห้องนี้" data-en="Reserve Room">จองห้องนี้</button>
+            </div>
+          </div>
+
+          <!-- Room 3 -->
+          <div class="room-pazo-card" onclick="openRoomModal('VIP Jacuzzi Suite', 'images/private-room.jpg')">
+            <div class="room-img-wrap">
+              <img src="images/private-room.jpg" alt="VIP Jacuzzi Suite" class="room-card-image">
+            </div>
+            <div class="room-card-info">
+              <h3 class="room-name-title">VIP Jacuzzi Suite</h3>
+              <p class="room-desc-body" data-th="ห้อง VVIP มอบความหรูหราขั้นสุดยอด อ่างจากุซซี่หินธรรมชาติพร้อมกลีบกุหลาบและน้ำอุ่นบำบัด เชื่อมต่อกับเตียงนวดอโรมาเฉพาะส่วนตัว มอบสัมผัสแห่งความสุขที่ไม่มีใครเทียบได้ สนุกและผ่อนคลายเต็มรูปแบบ" data-en="Supreme VVIP suite boasting a natural stone Jacuzzi tub immersed in floral petals, dedicated aroma massage zone, and supreme privacy for ultimate indulgence.">
+                ห้อง VVIP มอบความหรูหราขั้นสุดยอด อ่างจากุซซี่หินธรรมชาติพร้อมกลีบกุหลาบและน้ำอุ่นบำบัด เชื่อมต่อกับเตียงนวดอโรมาเฉพาะส่วนตัว มอบสัมผัสแห่งความสุขที่ไม่มีใครเทียบได้ สนุกและผ่อนคลายเต็มรูปแบบ
+              </p>
+              <button class="btn-pazo-white room-card-btn" data-th="จองห้องนี้" data-en="Reserve Room">จองห้องนี้</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 5: VIP LOUNGE & KARAOKE
+         ========================================================= -->
+    <section id="lounge">
+      <div class="lounge-overlay"></div>
+
+      <div class="container lounge-grid">
+        <div class="lounge-left-col">
+          <h2 class="lounge-heading" data-th="ห้อง VIP เลานจ์&lt;br&gt;สำหรับนักดื่ม &amp; ปาร์ตี้" data-en="VIP Lounge &amp;&lt;br&gt;Karaoke Entertainment">
+            ห้อง VIP เลานจ์<br>สำหรับนักดื่ม &amp; ปาร์ตี้
+          </h2>
+
+          <a href="#contact" class="btn-pazo-white" data-th="จองห้อง" data-en="Book Lounge">จองห้อง</a>
+
+          <p class="lounge-desc" data-th="ห้องคาราโอเกะ มีทีวีจอใหญ่ ให้ร้องเพลงพร้อมกับนั่งดื่มสังสรรค์กับเพื่อน ๆ โดยมีน้อง ๆ มาคอย เอ็นเตอร์เทน เคลียคลอไม่ห่างตลอดเวลา หากต้องการจัดประชุมนอกสถานที่เพื่อต้อนรับแขกคนสำคัญ หรือใช้จัดงานเลี้ยงฉลองวันเกิดแบบ Exclusive ในกลุ่มเพื่อนฝูง ก็มีห้องที่สามารถรองรับความสนุกสนานได้มากถึง 16 คนเลยทีเดียว ซึ่งบอกเลยว่าการพักผ่อนในห้อง VVIP นี้จะเป็นการสร้างความทรงจำที่ดีเยี่ยมที่คุณไม่อาจลืมเลือน" data-en="Featuring cinematic high-definition sound and visual systems, our luxury karaoke lounge accommodates intimate gatherings or VIP parties up to 16 guests. Our charming hostesses provide courteous attention throughout your celebration.">
+            ห้องคาราโอเกะ มีทีวีจอใหญ่ ให้ร้องเพลงพร้อมกับนั่งดื่มสังสรรค์กับเพื่อน ๆ โดยมีน้อง ๆ มาคอย เอ็นเตอร์เทน เคลียคลอไม่ห่างตลอดเวลา หากต้องการจัดประชุมนอกสถานที่เพื่อต้อนรับแขกคนสำคัญ หรือใช้จัดงานเลี้ยงฉลองวันเกิดแบบ Exclusive ในกลุ่มเพื่อนฝูง ก็มีห้องที่สามารถรองรับความสนุกสนานได้มากถึง 16 คนเลยทีเดียว ซึ่งบอกเลยว่าการพักผ่อนในห้อง VVIP นี้จะเป็นการสร้างความทรงจำที่ดีเยี่ยมที่คุณไม่อาจลืมเลือน
+          </p>
+        </div>
+
+        <div class="lounge-right-col">
+          <div class="lounge-image-card">
+            <img src="images/karaoke-room.jpg" alt="VIP Karaoke Suite">
+          </div>
+          <div class="lounge-box-note" data-th="หากคุณกำลังมองหาสถานที่ นวดผ่อนคลาย สุดเอ็กซ์คลูซีฟ พร้อมกับความ เอ็นเตอร์เทน ครบครัน ในบรรยากาศที่หรูหรา แต่ราคาจับต้องได้ LYRA SUPREME SPA คือคำตอบที่ใช่ที่สุด" data-en="If you are searching for an exclusive gentlemen's massage sanctuary paired with entertainment in luxury surroundings, LYRA SUPREME SPA is your premier choice.">
+            หากคุณกำลังมองหาสถานที่ นวดผ่อนคลาย สุดเอ็กซ์คลูซีฟ พร้อมกับความ เอ็นเตอร์เทน ครบครัน ในบรรยากาศที่หรูหรา แต่ราคาจับต้องได้ LYRA SUPREME SPA คือคำตอบที่ใช่ที่สุด
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 6: WHY US
+         ========================================================= -->
+    <section id="whyus">
+      <div class="container">
+        <div class="section-header-center">
+          <h2 class="section-main-title" data-th="ทำไมต้อง LYRA SPA" data-en="Why LYRA SPA">ทำไมต้อง LYRA SPA</h2>
+          <p class="section-subtitle-text" data-th="เหตุผลที่สุภาพบุรุษนับพันไว้วางใจให้เราดูแลความผ่อนคลาย" data-en="The reasons hundreds of discerning gentlemen choose us as their personal retreat.">
+            เหตุผลที่สุภาพบุรุษนับพันไว้วางใจให้เราดูแลความผ่อนคลาย
+          </p>
+        </div>
+
+        <div class="whyus-grid">
+          <div class="whyus-col">
+            <span class="whyus-quote-icon">“</span>
+            <h3 class="whyus-col-title" data-th="การออกแบบที่เย้ายวน" data-en="Seductive Aesthetics">การออกแบบที่เย้ายวน</h3>
+            <p class="whyus-col-desc" data-th="Lyra Spa ของเราให้ความสำคัญกับสถานที่ ไม่น้อยไปกว่าการบริการที่ยอดเยี่ยม เพราะเราถือว่านี่คือสิ่งแรกที่จะทำให้ลูกค้ารู้สึกผ่อนคลาย บรรยากาศสงบ ผสมผสานความหรูหราสไตล์โมเดิร์นที่ลงตัวในทุกมุมมอง" data-en="We prioritize our sanctuary atmosphere just as much as our premier massage. Every detail is carefully curated with ambient warmth and understated luxury.">
+              Lyra Spa ของเราให้ความสำคัญกับสถานที่ ไม่น้อยไปกว่าการบริการที่ยอดเยี่ยม เพราะเราถือว่านี่คือสิ่งแรกที่จะทำให้ลูกค้ารู้สึกผ่อนคลาย บรรยากาศสงบ ผสมผสานความหรูหราสไตล์โมเดิร์นที่ลงตัวในทุกมุมมอง
+            </p>
+          </div>
+
+          <div class="whyus-col">
+            <span class="whyus-quote-icon">“</span>
+            <h3 class="whyus-col-title" data-th="เติมเต็มความปรารถนาของคุณ" data-en="Fulfill Every Desire">เติมเต็มความปรารถนาของคุณ</h3>
+            <p class="whyus-col-desc" data-th="เราเชื่อว่าการผ่อนคลายที่แท้จริงเกิดขึ้นเมื่อประสาทสัมผัสทุกส่วนได้รับการดูแล กลิ่นหอมของน้ำมันอโรมาบริสุทธิ์ เสียงเพลงคลอเบา ๆ และสัมผัสอบอุ่นนุ่มนวลจากน้อง ๆ พริตตี้สปา ช่วยให้คุณปลดปล่อยความตึงเครียดได้อย่างสมบูรณ์" data-en="True tranquility happens when all senses align. Therapeutic pure essential oils, soft ambient melody, and gentle attentive care release all built-up stress.">
+              เราเชื่อว่าการผ่อนคลายที่แท้จริงเกิดขึ้นเมื่อประสาทสัมผัสทุกส่วนได้รับการดูแล กลิ่นหอมของน้ำมันอโรมาบริสุทธิ์ เสียงเพลงคลอเบา ๆ และสัมผัสอบอุ่นนุ่มนวลจากน้อง ๆ พริตตี้สปา ช่วยให้คุณปลดปล่อยความตึงเครียดได้อย่างสมบูรณ์
+            </p>
+          </div>
+
+          <div class="whyus-col">
+            <span class="whyus-quote-icon">“</span>
+            <h3 class="whyus-col-title" data-th="ดื่มด่ำกับการบริการที่ยอดเยี่ยม" data-en="Supreme Hospitality">ดื่มด่ำกับการบริการที่ยอดเยี่ยม</h3>
+            <p class="whyus-col-desc" data-th="เรามุ่งมั่นสร้างสรรค์ประสบการณ์ที่ยอดเยี่ยม ดูแลด้วยความสุภาพ อบอุ่น เป็นมิตร และที่สำคัญที่สุดคือการเก็บรักษาความลับและความเป็นส่วนตัวของลูกค้าทุกท่านสูงสุด 100% ตั้งแต่ก้าวแรกจนกระทั่งเดินทางกลับ" data-en="Our dedicated team delivers courteous, personalized hospitality with absolute confidentiality and utmost discretion guaranteed from arrival to departure.">
+              เรามุ่งมั่นสร้างสรรค์ประสบการณ์ที่ยอดเยี่ยม ดูแลด้วยความสุภาพ อบอุ่น เป็นมิตร และที่สำคัญที่สุดคือการเก็บรักษาความลับและความเป็นส่วนตัวของลูกค้าทุกท่านสูงสุด 100% ตั้งแต่ก้าวแรกจนกระทั่งเดินทางกลับ
+            </p>
+          </div>
+        </div>
+
+        <div class="whyus-cta-center">
+          <a href="#contact" class="btn-pazo-white" data-th="สอบถามเรา" data-en="Inquire Now">สอบถามเรา</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 7: CAREERS / RECRUITMENT
+         ========================================================= -->
+    <section id="careers">
+      <div class="careers-overlay"></div>
+
+      <div class="container">
+        <div class="careers-top-grid">
+          <div class="careers-text-col">
+            <h2 class="careers-heading" data-th="รับสมัคร สาวสวย&lt;br&gt;พริตตี้ จำนวนมาก" data-en="Join Our Elite Team&lt;br&gt;Hostess &amp; Spa Therapist">
+              รับสมัคร สาวสวย<br>พริตตี้ จำนวนมาก
+            </h2>
+
+            <p class="careers-desc" data-th="LYRA SUPREME SPA สปาสำหรับสุภาพบุรุษของเรา นอกจากจะให้ความสำคัญกับลูกค้าแล้ว เรายังใส่ใจกับพนักงานเป็นอย่างสูง เพราะเรามองว่าทุกคนคือครอบครัว การบริการจะดีได้พนักงานที่ให้บริการคือส่วนสำคัญ ดังนั้นหากสาว ๆ ต้องการทำงานพริตตี้ งานกลางคืน ลงแทร็ค ลงร้านกรุงเทพ งานเสริมรายได้ดี ที่มีที่พักฟรี ทางเรายินดีต้อนรับ" data-en="At LYRA SUPREME SPA, our team members are respected like family. We offer exceptional earnings, safe working conditions, luxury dormitory accommodation, and professional support in a reputable environment.">
+              LYRA SUPREME SPA สปาสำหรับสุภาพบุรุษของเรา นอกจากจะให้ความสำคัญกับลูกค้าแล้ว เรายังใส่ใจกับพนักงานเป็นอย่างสูง เพราะเรามองว่าทุกคนคือครอบครัว การบริการจะดีได้พนักงานที่ให้บริการคือส่วนสำคัญ ดังนั้นหากสาว ๆ ต้องการทำงานพริตตี้ งานกลางคืน ลงแทร็ค ลงร้านกรุงเทพ งานเสริมรายได้ดี ที่มีที่พักฟรี ทางเรายินดีต้อนรับ
+            </p>
+
+            <a href="https://line.me" target="_blank" class="btn-pazo-white" data-th="สอบถามงานแอดไลน์" data-en="Apply via LINE">สอบถามงานแอดไลน์</a>
+          </div>
+
+          <div class="about-card-box">
+            <img src="images/pazo-models-hero.jpg" alt="Join Lyra Team" class="about-card-img" style="aspect-ratio: 16/10;">
+            <div class="about-card-caption">
+              <h3 class="about-card-title" data-th="บรรยากาศการทำงานที่อบอุ่นและปลอดภัย" data-en="Safe, Warm &amp; Supportive Environment">บรรยากาศการทำงานที่อบอุ่นและปลอดภัย</h3>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Benefit Boxes (Pazo Style) -->
+        <div class="careers-perks-grid">
+          <div class="career-perk-card" data-th="แม่บ้านคอยดูแลเอาใจใส่ ทำความสะอาดตลอด ทำอาหารให้ทานฟรีทุกมื้อ อยากทานอะไรบอกได้เลย เพื่อให้พนักงานทุกคนได้อยู่บรรยากาศอบอุ่นเหมือนอยู่บ้าน" data-en="Full-time housekeeping support, complimentary fresh meals daily, and comfortable residential facilities.">
+            แม่บ้านคอยดูแลเอาใจใส่ ทำความสะอาดตลอด ทำอาหารให้ทานฟรีทุกมื้อ อยากทานอะไรบอกได้เลย เพื่อให้พนักงานทุกคนได้อยู่บรรยากาศอบอุ่นเหมือนอยู่บ้าน
+          </div>
+          <div class="career-perk-card" data-th="รายได้สูง ทิปดี ไม่มีหักค่าแม่บ้านหรือเรียกเก็บค่าใช้จ่ายอื่น ๆ เพื่อให้มั่นใจว่าคุณจะมีความมั่นคงทางการเงิน ไม่ถูกเอาเปรียบ จ่ายตรงเวลาทุกงวด" data-en="Top tier earnings and generous tips. Zero hidden deductions, reliable on-time payouts, and solid financial security.">
+            รายได้สูง ทิปดี ไม่มีหักค่าแม่บ้านหรือเรียกเก็บค่าใช้จ่ายอื่น ๆ เพื่อให้มั่นใจว่าคุณจะมีความมั่นคงทางการเงิน ไม่ถูกเอาเปรียบ จ่ายตรงเวลาทุกงวด
+          </div>
+          <div class="career-perk-card" data-th="เก็บความลับเรื่องงานถือเป็นเรื่องใหญ่ เราเน้นย้ำมากที่สุดในเรื่องรักษาข้อมูลสูงสุด เพราะสภาพแวดล้อมการทำงานที่ดี ปลอดภัย ให้เกียรติซึ่งกันและกัน" data-en="Strict 100% privacy and identity confidentiality. Safe professional sanctuary that honors mutual respect.">
+            เก็บความลับเรื่องงานถือเป็นเรื่องใหญ่ เราเน้นย้ำมากที่สุดในเรื่องรักษาข้อมูลสูงสุด เพราะสภาพแวดล้อมการทำงานที่ดี ปลอดภัย ให้เกียรติซึ่งกันและกัน
+          </div>
+        </div>
+
+        <!-- Pazo Iconic Stitched Dashed Banner -->
+        <div class="pazo-stitched-banner">
+          <p class="banner-subtag" data-th="ทำงานที่ LYRA SUPREME SPA" data-en="Careers at LYRA SUPREME SPA">ทำงานที่ LYRA SUPREME SPA</p>
+          <h3 class="banner-big-text" data-th="อยู่สบาย รายได้สูง" data-en="Comfortable &amp; High Earnings">อยู่สบาย รายได้สูง</h3>
+          <div class="banner-tags-row">
+            <span class="banner-pill-badge" data-th="ลาดพร้าว 71" data-en="Ladprao 71">ลาดพร้าว 71</span>
+            <span class="banner-pill-badge" data-th="นวดโดยสาวสวย" data-en="Pretty Therapist">นวดโดยสาวสวย</span>
+            <span class="banner-pill-badge" data-th="ที่พักฟรี อาหารฟรี" data-en="Free Stay &amp; Meals">ที่พักฟรี อาหารฟรี</span>
+          </div>
+          <p class="banner-disclaimer" data-th="นักแสดงในวิดีโอและภาพถ่ายเป็นนางแบบเพื่อการโฆษณาเท่านั้น" data-en="Actors and photos depicted are models for advertising purposes only">
+            นักแสดงในวิดีโอและภาพถ่ายเป็นนางแบบเพื่อการโฆษณาเท่านั้น
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SECTION 8: CONTACT US & MAP
+         ========================================================= -->
+    <section id="contact">
+      <div class="contact-overlay"></div>
+
+      <div class="container contact-grid">
+        <div class="contact-card-box">
+          <h2 class="contact-title" data-th="ติดต่อเรา" data-en="Contact Us">ติดต่อเรา</h2>
+
+          <div class="contact-info-list">
+            <div class="contact-item-row">
+              <span class="contact-item-label" data-th="ที่ตั้ง:" data-en="Location:">ที่ตั้ง:</span>
+              <span class="contact-item-value" data-th="ซอยลาดพร้าว 71 เขตวังทองหลาง กรุงเทพฯ (ใกล้เลียบด่วนเอกมัย–รามอินทรา)" data-en="Soi Ladprao 71, Wang Thonglang, Bangkok (Near Pradit Manutham Rd.)">ซอยลาดพร้าว 71 เขตวังทองหลาง กรุงเทพฯ (ใกล้เลียบด่วนเอกมัย–รามอินทรา)</span>
+            </div>
+            <div class="contact-item-row">
+              <span class="contact-item-label" data-th="เวลาทำการ:" data-en="Hours:">เวลาทำการ:</span>
+              <span class="contact-item-value" data-th="เปิดทุกวัน 11:00 – 24:00 น." data-en="Daily 11:00 AM – Midnight">เปิดทุกวัน 11:00 – 24:00 น.</span>
+            </div>
+            <div class="contact-item-row">
+              <span class="contact-item-label" data-th="Line ID:" data-en="Line ID:">Line ID:</span>
+              <span class="contact-item-value">@LYRASPA</span>
+            </div>
+            <div class="contact-item-row">
+              <span class="contact-item-label" data-th="เบอร์โทร:" data-en="Phone:">เบอร์โทร:</span>
+              <span class="contact-item-value">02-XXX-XXXX / 064-006-XXXX</span>
+            </div>
+            <div class="contact-item-row">
+              <span class="contact-item-label" data-th="ที่จอดรถ:" data-en="Parking:">ที่จอดรถ:</span>
+              <span class="contact-item-value" data-th="ที่จอดรถในร่มส่วนตัว 30+ คัน" data-en="Private covered parking for 30+ vehicles">ที่จอดรถในร่มส่วนตัว 30+ คัน</span>
+            </div>
+          </div>
+
+          <a href="https://line.me" target="_blank" class="btn-pazo-white" style="align-self: flex-start;" data-th="แอดไลน์คลิก" data-en="Add LINE Now">แอดไลน์คลิก</a>
+        </div>
+
+        <div class="map-embed-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15498.483103444857!2d100.6031267866504!3d13.80108398188151!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e29e09d57a2c07%3A0xe54ef02e07ee5389!2z4LiL4Lit4Lii4Lil4Liy4LiU4Lie4Lij4LmJ4Liy4LinIDcxIOC5geC4guC4p-C4h-C4quC4sOC4nu4LiL4Liq4Lit4LiH!5e0!3m2!1sth!2sth!4v1700000000000!5m2!1sth!2sth" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="LYRA SUPREME SPA Location Map">
+          </iframe>
+          <div class="map-floating-card">
+            <p class="map-card-name">LYRA SUPREME SPA</p>
+            <p class="map-card-addr" data-th="ลาดพร้าว 71 • เลียบด่วนเอกมัย–รามอินทรา" data-en="Ladprao 71 • Ekkamai-Ramintra">ลาดพร้าว 71 • เลียบด่วนเอกมัย–รามอินทรา</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer id="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="#about" data-th="เกี่ยวกับเรา" data-en="About Us">เกี่ยวกับเรา</a>
+        <span>|</span>
+        <a href="#rooms" data-th="ห้องรับรอง" data-en="Suites">ห้องรับรอง</a>
+        <span>|</span>
+        <a href="#careers" data-th="ร่วมงานกับเรา" data-en="Careers">ร่วมงานกับเรา</a>
+        <span>|</span>
+        <a href="#contact" data-th="ติดต่อเรา" data-en="Contact">ติดต่อเรา</a>
+        <span>|</span>
+        <a href="#" data-th="Privacy Policy" data-en="Privacy Policy">Privacy Policy</a>
+      </div>
+      <p>&copy; 2026 LYRA SUPREME SPA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       FLOATING ACTION BUTTONS (Bottom Right: Phone & LINE)
+       ========================================================= -->
+  <div class="floating-actions">
+    <!-- Phone Button -->
+    <a href="tel:0640069000" class="float-btn float-phone" title="โทรสอบถาม" aria-label="โทรติดต่อ">
+      <svg viewBox="0 0 24 24">
+        <path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+      </svg>
+    </a>
+
+    <!-- LINE Button -->
+    <a href="https://line.me" target="_blank" class="float-btn float-line" title="คุยผ่าน LINE" aria-label="แอดไลน์สอบถาม">
+      <svg viewBox="0 0 24 24">
+        <path d="M12 2C6.48 2 2 5.82 2 10.53c0 2.92 1.74 5.51 4.41 7.02-.19.7-.69 2.54-.79 2.93-.13.49.18.48.38.35.15-.1 2.45-1.63 3.44-2.31.83.16 1.69.24 2.56.24 5.52 0 10-3.82 10-8.53S17.52 2 12 2zm-3.75 11.2h-1.5c-.28 0-.5-.22-.5-.5v-4.4c0-.28.22-.5.5-.5h1.5c.28 0 .5.22.5.5s-.22.5-.5.5h-1v1.2h1c.28 0 .5.22.5.5s-.22.5-.5.5h-1v1.2h1c.28 0 .5.22.5.5s-.22.5-.5.5zm3.25 0c-.28 0-.5-.22-.5-.5v-4.4c0-.28.22-.5.5-.5s.5.22.5.5v4.4c0 .28-.22.5-.5.5zm3.75 0h-.5c-.2 0-.39-.12-.46-.31l-1.78-3.08v2.89c0 .28-.22.5-.5.5s-.5-.22-.5-.5v-4.4c0-.2.12-.39.31-.46.19-.08.41-.03.54.12l1.89 3.27v-2.93c0-.28.22-.5.5-.5s.5.22.5.5v4.4c0 .28-.22.5-.5.5zm3.5-3.4c.28 0 .5.22.5.5s-.22.5-.5.5h-1.5v.9h1.5c.28 0 .5.22.5.5s-.22.5-.5.5h-2c-.28 0-.5-.22-.5-.5v-4.4c0-.28.22-.5.5-.5h2c.28 0 .5.22.5.5s-.22.5-.5.5h-1.5v1h1.5z"/>
+      </svg>
+    </a>
+  </div>
+
+  <!-- =========================================================
+       MODALS
+       ========================================================= -->
+  <div class="modal-backdrop" id="modal-container">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">สอบถาม &amp; จองห้องรับรอง</h3>
+        <button class="modal-close-btn" id="modal-close" aria-label="ปิด">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <img id="modal-img" src="images/LINE_ALBUM_Deluxe room_260920_1.jpg" alt="Preview">
+        <p id="modal-text" style="color: #e0d4cc; font-size: 15px; line-height: 1.7;">
+          ต้องการสอบถามคอร์สนวด ดูโปรไฟล์น้องพริตตี้ หรือจองห้องรับรองส่วนตัว สามารถติดต่อเราได้ทันทีผ่าน LINE Concierge
+        </p>
+        <a href="https://line.me" target="_blank" class="btn-pazo-white" style="margin: 8px auto 0;">
+          ติดต่อผ่าน LINE: @LYRASPA
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT
+       ========================================================= -->
+  <script>
+    // Mobile Drawer Toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    hamburgerBtn.addEventListener('click', () => {
+      mobileDrawer.classList.toggle('open');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileDrawer.classList.remove('open');
+      });
+    });
+
+    // Bilingual Switcher (TH / EN)
+    const btnTh = document.getElementById('btn-lang-th');
+    const btnEn = document.getElementById('btn-lang-en');
+    const translatableElements = document.querySelectorAll('[data-th][data-en]');
+
+    function setLanguage(lang) {
+      if (lang === 'th') {
+        btnTh.classList.add('active');
+        btnEn.classList.remove('active');
+        document.documentElement.lang = 'th';
+        translatableElements.forEach(el => {
+          el.innerHTML = el.getAttribute('data-th');
+        });
+      } else {
+        btnEn.classList.add('active');
+        btnTh.classList.remove('active');
+        document.documentElement.lang = 'en';
+        translatableElements.forEach(el => {
+          el.innerHTML = el.getAttribute('data-en');
+        });
+      }
+    }
+
+    btnTh.addEventListener('click', () => setLanguage('th'));
+    btnEn.addEventListener('click', () => setLanguage('en'));
+
+    // Modal Handling
+    const modal = document.getElementById('modal-container');
+    const modalClose = document.getElementById('modal-close');
+    const modalTitle = document.getElementById('modal-title');
+    const modalImg = document.getElementById('modal-img');
+    const modalText = document.getElementById('modal-text');
+
+    function openRoomModal(title, imgSrc) {
+      modalTitle.textContent = title;
+      modalImg.src = imgSrc;
+      modalText.textContent = `จองห้องพักผ่อน ${title} ในบรรยากาศสุดเอ็กซ์คลูซีฟ พร้อมการดูแลอย่างใส่ใจระดับพรีเมียม`;
+      modal.classList.add('active');
+    }
+
+    modalClose.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+
+    // View Models button
+    const btnViewModels = document.getElementById('btn-view-models');
+    if (btnViewModels) {
+      btnViewModels.addEventListener('click', () => {
+        modalTitle.textContent = 'ดูโปรไฟล์น้อง & นัดหมายเวลา';
+        modalImg.src = 'images/pazo-models-hero.jpg';
+        modalText.textContent = 'ต้องการดูรูปโปรไฟล์น้องพริตตี้สปาประจำวัน หรือสอบถามตารางเวลา สามารถแอดไลน์เพื่อรับข้อมูลส่วนตัวได้ทันที';
+        modal.classList.add('active');
+      });
+    }
+
+    // Video preview trigger
+    const videoTrigger = document.getElementById('btn-play-clip');
+    if (videoTrigger) {
+      videoTrigger.addEventListener('click', () => {
+        modalTitle.textContent = 'ชมวิดีโอแนะนำ LYRA SUPREME SPA';
+        modalImg.src = 'images/hero-bg.jpg';
+        modalText.textContent = 'คลิปแนะนำบรรยากาศภายในสปาและห้องรับรองสุดหรู (แสดงโดยนักแสดงเพื่อการประกอบโฆษณาเท่านั้น)';
+        modal.classList.add('active');
+      });
+    }
+  </script>
+</body>
+</html>

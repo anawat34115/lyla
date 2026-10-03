@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LYRA SUPREME SPA — เลือกดู Design</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Sans+Thai:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      background: #080608;
+      color: #F0EBE3;
+      font-family: 'Noto Sans Thai', sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 3rem 1.5rem;
+      background-image:
+        radial-gradient(ellipse at 20% 20%, rgba(200,168,60,0.06) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 80%, rgba(180,120,60,0.05) 0%, transparent 55%);
+    }
+
+    /* Header */
+    .page-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .page-eyebrow {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(212,175,55,0.75);
+      margin-bottom: 1.25rem;
+    }
+    .page-logo {
+      font-family: 'Cinzel', serif;
+      font-size: clamp(1.5rem, 5vw, 2.5rem);
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      color: #F0EBE3;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .page-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2.5vw, 1.375rem);
+      font-style: italic;
+      color: #D4AF37;
+      font-weight: 300;
+      display: block;
+      margin-bottom: 2rem;
+    }
+    .page-divider {
+      width: 80px;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(212,175,55,0.6), transparent);
+      margin: 0 auto 2rem;
+    }
+    .page-desc {
+      font-size: 14px;
+      color: rgba(240,235,227,0.55);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* Cards */
+    .designs-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      width: 100%;
+      max-width: 960px;
+    }
+    @media (min-width: 768px) {
+      .designs-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .design-card {
+      position: relative;
+      border: 1px solid rgba(212,175,55,0.2);
+      background: rgba(255,255,255,0.02);
+      overflow: hidden;
+      transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .design-card:hover {
+      border-color: rgba(212,175,55,0.55);
+      transform: translateY(-6px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(212,175,55,0.1);
+      background: rgba(212,175,55,0.03);
+    }
+    .design-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(to right, var(--accent-from), var(--accent-to));
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+    .design-card:hover::before { opacity: 1; }
+
+    /* Preview thumbnails */
+    .card-preview {
+      position: relative;
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      background: #100E0C;
+    }
+    .preview-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      filter: brightness(0.75);
+      transition: transform 0.7s ease, filter 0.4s;
+    }
+    .design-card:hover .preview-img {
+      transform: scale(1.04);
+      filter: brightness(0.6);
+    }
+    .preview-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 30%, rgba(8,6,8,0.85) 100%);
+    }
+    .preview-badge {
+      position: absolute;
+      top: 1rem; right: 1rem;
+      font-size: 9px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.75rem;
+      background: rgba(8,6,8,0.85);
+      backdrop-filter: blur(4px);
+      border: 1px solid var(--badge-color, rgba(212,175,55,0.5));
+      color: var(--badge-color, #D4AF37);
+    }
+
+    /* Card body */
+    .card-body { padding: 1.75rem 2rem 2rem; }
+    .card-num {
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      letter-spacing: 0.28em;
+      color: rgba(212,175,55,0.6);
+      display: block;
+      margin-bottom: 0.625rem;
+    }
+    .card-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      color: #F0EBE3;
+      margin-bottom: 0.25rem;
+      font-weight: 500;
+    }
+    .card-style {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: #D4AF37;
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .card-desc {
+      font-size: 13px;
+      color: rgba(240,235,227,0.5);
+      line-height: 1.75;
+      margin-bottom: 1.25rem;
+    }
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.375rem;
+      margin-bottom: 1.5rem;
+    }
+    .card-tag {
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.625rem;
+      border: 1px solid rgba(212,175,55,0.2);
+      color: rgba(212,175,55,0.7);
+    }
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #D4AF37;
+      font-weight: 500;
+      transition: gap 0.3s;
+    }
+    .design-card:hover .card-cta { gap: 1rem; }
+    .cta-arrow {
+      display: inline-block;
+      transition: transform 0.3s;
+    }
+    .design-card:hover .cta-arrow { transform: translateX(4px); }
+
+    /* Design 1 accent */
+    .card-d1 { --accent-from: #C9A84C; --accent-to: transparent; --badge-color: #E8C97A; }
+    /* Design 2 accent */
+    .card-d2 { --accent-from: #D4AF37; --accent-to: transparent; --badge-color: #D4AF37; }
+
+    /* Footer note */
+    .page-footer {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .page-footer p {
+      font-size: 11px;
+      color: rgba(240,235,227,0.25);
+      letter-spacing: 0.08em;
+    }
+    .page-footer a {
+      color: rgba(212,175,55,0.5);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .page-footer a:hover { color: #D4AF37; }
+  </style>
+</head>
+<body>
+
+  <header class="page-header">
+    <span class="page-eyebrow">Confidential Design Preview</span>
+    <span class="page-logo">LYRA SUPREME SPA</span>
+    <span class="page-sub">Private Gentlemen's Sanctuary • ลาดพร้าว 71</span>
+    <div class="page-divider"></div>
+    <p class="page-desc">เลือกดูแบบออกแบบเว็บไซต์ทั้ง 2 แบบ แล้วแจ้งกลับว่าชอบแบบไหน หรือต้องการปรับแก้อะไรเพิ่มเติม</p>
+  </header>
+
+  <div class="designs-grid">
+
+    <!-- Design 1 -->
+    <a href="design1.html" class="design-card card-d1">
+      <div class="card-preview">
+        <img
+          src="images/LINE_ALBUM_Deluxe room_260920_1.jpg"
+          alt="Design 1 Preview"
+          class="preview-img"
+        >
+        <div class="preview-overlay"></div>
+        <span class="preview-badge">Design 01</span>
+      </div>
+      <div class="card-body">
+        <span class="card-num">DESIGN NO. 01</span>
+        <h2 class="card-title">Modern Gold Gradient</h2>
+        <span class="card-style">Tailwind + Playfair Display</span>
+        <p class="card-desc">สไตล์ Modern Editorial พร้อม Gold Gradient effect บน hero, Card-based layout สำหรับ Highlights และ Gallery, hover animations เล่นแสงเงา สร้างความรู้สึกหรูหราและทันสมัย</p>
+        <div class="card-tags">
+          <span class="card-tag">Dark Modern</span>
+          <span class="card-tag">Gold Gradient</span>
+          <span class="card-tag">Animated Hero</span>
+          <span class="card-tag">Card Layout</span>
+          <span class="card-tag">Hover Effects</span>
+        </div>
+        <span class="card-cta">
+          ดูแบบนี้
+          <span class="cta-arrow">&#8594;</span>
+        </span>
+      </div>
+    </a>
+
+    <!-- Design 2 -->
+    <a href="design2.html" class="design-card card-d2">
+      <div class="card-preview">
+        <img
+          src="images/LINE_ALBUM_Deluxe room_260920_2.jpg"
+          alt="Design 2 Preview"
+          class="preview-img"
+        >
+        <div class="preview-overlay"></div>
+        <span class="preview-badge">Design 02</span>
+      </div>
+      <div class="card-body">
+        <span class="card-num">DESIGN NO. 02</span>
+        <h2 class="card-title">Dark Luxury Editorial</h2>
+        <span class="card-style">Cormorant Garamond + Cinzel</span>
+        <p class="card-desc">สไตล์ Luxury Spa Editorial อ้างอิงจาก Pazo Spa — Fullscreen hero ขนาดใหญ่, Section-based scrolling บน background image, Floating LINE/Phone CTA, Dark Obsidian tone ให้ความรู้สึกสงบหรูหรา</p>
+        <div class="card-tags">
+          <span class="card-tag">Dark Obsidian</span>
+          <span class="card-tag">Pazo Ref</span>
+          <span class="card-tag">Editorial Style</span>
+          <span class="card-tag">Fullscreen Hero</span>
+          <span class="card-tag">Floating CTA</span>
+        </div>
+        <span class="card-cta">
+          ดูแบบนี้
+          <span class="cta-arrow">&#8594;</span>
+        </span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer class="page-footer">
+    <p>LYRA SUPREME SPA &nbsp;|&nbsp; Confidential Design Preview &nbsp;|&nbsp; <a href="mailto:">แจ้งความเห็นกลับ</a></p>
+  </footer>
+
+</body>
+</html>

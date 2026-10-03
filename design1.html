@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LYRA SUPREME SPA — Design 1</title>
+  <meta name="description" content="LYRA SUPREME SPA สปาส่วนตัวสำหรับสุภาพบุรุษ ลาดพร้าว 71">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Noto+Sans+Thai:wght@300;400;500;600&family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* ===== 8PX GRID TOKENS ===== */
+    :root {
+      --s1:  8px;
+      --s2:  16px;
+      --s3:  24px;
+      --s4:  32px;
+      --s5:  40px;
+      --s6:  48px;
+      --s7:  56px;
+      --s8:  64px;
+      --s10: 80px;
+      --s12: 96px;
+      --s16: 128px;
+
+      --gold:   #C9A84C;
+      --gold-l: #DFC278;
+      --dark:   #09090D;
+      --dark-2: #101018;
+      --dark-3: #16161F;
+      --cream:  #F4EFE6;
+      --muted:  #8A8196;
+      --dim:    #4A4558;
+
+      --nav-h: 72px;
+      --ease:  cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + var(--s2)); }
+    body {
+      background: var(--dark);
+      color: var(--cream);
+      font-family: 'Noto Sans Thai', sans-serif;
+      font-size: 15px;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+    button { cursor: pointer; border: none; background: none; font: inherit; }
+    ::-webkit-scrollbar { width: 4px; }
+    ::-webkit-scrollbar-track { background: var(--dark); }
+    ::-webkit-scrollbar-thumb { background: rgba(201,168,76,0.3); border-radius: 2px; }
+
+    /* ===== LAYOUT ===== */
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 var(--s4);
+    }
+    @media (min-width: 1024px) { .wrap { padding: 0 var(--s8); } }
+
+    /* ===== NAV ===== */
+    #nav {
+      position: fixed; top: 0; left: 0; right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      background: rgba(9,9,13,0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      transition: background 0.3s var(--ease);
+    }
+    #nav.scrolled { background: rgba(9,9,13,0.99); }
+    .nav-inner {
+      max-width: 1280px; margin: 0 auto;
+      padding: 0 var(--s4);
+      height: 100%;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--s4);
+    }
+    @media (min-width: 1024px) { .nav-inner { padding: 0 var(--s8); } }
+    .nav-logo {
+      font-family: 'Cinzel', serif;
+      font-size: 14px;
+      letter-spacing: 0.16em;
+      color: var(--cream);
+      flex-shrink: 0;
+    }
+    .nav-logo em {
+      font-style: normal;
+      color: var(--gold);
+    }
+    .nav-links {
+      display: none;
+      gap: var(--s5);
+    }
+    @media (min-width: 1024px) { .nav-links { display: flex; } }
+    .nav-links a {
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      transition: color 0.25s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      height: 40px;
+      padding: 0 var(--s3);
+      border: 1px solid var(--gold);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      transition: all 0.25s;
+      flex-shrink: 0;
+    }
+    .nav-cta:hover { background: var(--gold); color: var(--dark); }
+
+    /* hamburger */
+    .ham {
+      display: flex; flex-direction: column;
+      gap: 5px; padding: var(--s1);
+    }
+    @media (min-width: 1024px) { .ham { display: none; } }
+    .ham span { display: block; width: 24px; height: 1px; background: var(--cream); transition: all 0.25s; }
+    .ham.open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+    .ham.open span:nth-child(2) { opacity: 0; }
+    .ham.open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+    /* mobile drawer */
+    .drawer-bg { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.7); z-index:200; }
+    .drawer-bg.open { display:block; }
+    .drawer {
+      position: fixed; top:0; right:-100%;
+      height: 100%; width: min(320px, 85vw);
+      background: var(--dark-2);
+      border-left: 1px solid rgba(201,168,76,0.15);
+      z-index: 201;
+      padding: var(--s8) var(--s4) var(--s4);
+      display: flex; flex-direction: column; gap: 2px;
+      transition: right 0.3s var(--ease);
+    }
+    .drawer.open { right: 0; }
+    .drawer-close {
+      position: absolute; top: var(--s3); right: var(--s3);
+      font-size: 20px; color: var(--muted);
+    }
+    .drawer a {
+      display: block;
+      padding: var(--s2) 0;
+      font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted);
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      transition: color 0.25s;
+    }
+    .drawer a:hover { color: var(--gold); }
+    .drawer .nav-cta { margin-top: var(--s3); width: 100%; justify-content: center; }
+
+    /* ===== HERO ===== */
+    #hero {
+      position: relative; height: 100vh; min-height: 640px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero-bg-img {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      animation: heroZoom 14s var(--ease) infinite alternate;
+    }
+    @keyframes heroZoom {
+      from { transform: scale(1); }
+      to   { transform: scale(1.05); }
+    }
+    .hero-vignette {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(9,9,13,0.6) 0%, transparent 30%, rgba(9,9,13,0.75) 100%),
+        linear-gradient(to right,  rgba(9,9,13,0.5) 0%, transparent 50%);
+    }
+    .hero-content {
+      position: relative; z-index: 2;
+      display: flex; flex-direction: column; align-items: center;
+      text-align: center;
+      padding: 0 var(--s4);
+      max-width: 960px;
+    }
+    .hero-kicker {
+      font-size: 9px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.8);
+      margin-bottom: var(--s3);
+    }
+    .hero-h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.5rem, 10vw, 8rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: 0.02em;
+      color: var(--cream);
+      margin-bottom: var(--s4);
+    }
+    .hero-h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--gold-l) 55%, var(--gold) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .hero-p {
+      font-size: 16px;
+      color: rgba(244,239,230,0.6);
+      letter-spacing: 0.04em;
+      max-width: 480px;
+      margin-bottom: var(--s5);
+    }
+    .hero-btns { display: flex; gap: var(--s2); flex-wrap: wrap; justify-content: center; }
+    .btn-fill {
+      height: 48px; padding: 0 var(--s4);
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700;
+      display: inline-flex; align-items: center;
+      transition: all 0.25s;
+    }
+    .btn-fill:hover { background: var(--gold-l); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(201,168,76,0.3); }
+    .btn-outline {
+      height: 48px; padding: 0 var(--s4);
+      border: 1px solid rgba(244,239,230,0.3);
+      color: var(--cream);
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase;
+      display: inline-flex; align-items: center;
+      transition: all 0.25s;
+    }
+    .btn-outline:hover { border-color: var(--gold); color: var(--gold); }
+    .hero-scroll {
+      position: absolute; bottom: var(--s4); left: 50%; transform: translateX(-50%);
+      z-index: 2; display: flex; flex-direction: column; align-items: center; gap: var(--s1);
+    }
+    .hero-scroll span { font-size: 9px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--dim); }
+    .scroll-dot {
+      width: 5px; height: 5px; border-radius: 50%; background: var(--gold);
+      animation: dot 1.8s var(--ease) infinite;
+    }
+    @keyframes dot { 0%,100%{transform:translateY(0);opacity:.4;} 50%{transform:translateY(8px);opacity:1;} }
+
+    /* ===== ABOUT ===== */
+    #about {
+      padding: var(--s16) 0;
+      background: var(--dark-2);
+    }
+    .about-layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s8);
+      align-items: start;
+    }
+    @media (min-width: 1024px) {
+      .about-layout { grid-template-columns: 1fr 1fr; gap: var(--s12); }
+    }
+    .about-img-stack { position: relative; }
+    .about-main-img {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border: 1px solid rgba(201,168,76,0.18);
+      cursor: pointer;
+      transition: filter 0.4s;
+    }
+    .about-main-img:hover { filter: brightness(0.85); }
+    .about-stat-pill {
+      position: absolute; bottom: var(--s3); left: var(--s3);
+      background: rgba(9,9,13,0.92);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-left: 2px solid var(--gold);
+      padding: var(--s2) var(--s3);
+    }
+    .pill-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem; line-height: 1;
+      color: var(--gold); display: block;
+      margin-bottom: 2px;
+    }
+    .pill-text { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--muted); }
+    .about-text { display: flex; flex-direction: column; justify-content: center; }
+    .eyebrow {
+      font-size: 9px; letter-spacing: 0.32em;
+      text-transform: uppercase; color: var(--gold);
+      display: block; margin-bottom: var(--s2);
+    }
+    .h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 4.5vw, 3rem);
+      font-weight: 400; line-height: 1.15;
+      color: var(--cream); margin-bottom: var(--s4);
+    }
+    .h2 em { font-style: italic; color: var(--gold); }
+    .body-p {
+      font-size: 15px; color: var(--muted);
+      line-height: 1.85; margin-bottom: var(--s4);
+    }
+    /* Specs table */
+    .specs {
+      border-top: 1px solid rgba(201,168,76,0.15);
+      padding-top: var(--s3);
+      display: flex; flex-direction: column; gap: var(--s2);
+    }
+    .spec-row {
+      display: flex; justify-content: space-between;
+      align-items: baseline; gap: var(--s2);
+    }
+    .spec-k {
+      font-size: 9px; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--dim); flex-shrink: 0;
+    }
+    .spec-v { font-size: 13px; color: var(--cream); font-weight: 500; text-align: right; }
+
+    /* ===== HIGHLIGHTS ===== */
+    #highlights {
+      padding: var(--s16) 0;
+      background: var(--dark-3);
+      position: relative;
+    }
+    #highlights::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse 60% 60% at 75% 50%, rgba(201,168,76,0.05), transparent);
+      pointer-events: none;
+    }
+    .hl-header { max-width: 520px; margin-bottom: var(--s8); }
+    .hl-list {
+      display: flex; flex-direction: column;
+      border-top: 1px solid rgba(201,168,76,0.15);
+    }
+    .hl-item {
+      display: grid;
+      grid-template-columns: var(--s10) 1fr;   /* 80px index col */
+      gap: var(--s4);
+      padding: var(--s5) 0;
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      transition: padding-left 0.3s var(--ease);
+    }
+    .hl-item:hover { padding-left: var(--s2); }
+    .hl-n {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem; line-height: 1;
+      color: rgba(201,168,76,0.2);
+      transition: color 0.3s;
+      padding-top: 4px;
+    }
+    .hl-item:hover .hl-n { color: rgba(201,168,76,0.55); }
+    .hl-body h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+      font-weight: 400; color: var(--cream);
+      margin-bottom: 4px; line-height: 1.2;
+    }
+    .hl-en {
+      font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--dim); display: block; margin-bottom: var(--s2);
+    }
+    .hl-body p {
+      font-size: 14px; color: var(--muted); line-height: 1.8;
+    }
+
+    /* ===== GALLERY ===== */
+    #gallery {
+      padding: var(--s16) 0;
+      background: var(--dark-2);
+    }
+    .gallery-top {
+      display: flex; flex-direction: column; gap: var(--s3);
+      margin-bottom: var(--s6);
+      border-bottom: 1px solid rgba(201,168,76,0.15);
+      padding-bottom: var(--s4);
+    }
+    @media (min-width: 768px) {
+      .gallery-top { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    }
+    .tabs { display: flex; gap: var(--s1); flex-wrap: wrap; }
+    .tab {
+      height: 32px; padding: 0 var(--s2);
+      border: 1px solid rgba(201,168,76,0.2);
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--muted); background: transparent;
+      transition: all 0.25s;
+    }
+    .tab:hover, .tab.active {
+      border-color: var(--gold); color: var(--gold); background: rgba(201,168,76,0.05);
+    }
+    .gal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s2);
+    }
+    @media (min-width: 1024px) { .gal-grid { grid-template-columns: repeat(3, 1fr); } }
+    .gal-item {
+      position: relative; overflow: hidden; cursor: pointer;
+      border: 1px solid rgba(201,168,76,0.12);
+    }
+    .gal-item img { width: 100%; aspect-ratio: 4/3; object-fit: cover; transition: transform 0.7s, filter 0.4s; }
+    .gal-item:hover img { transform: scale(1.06); filter: brightness(0.65); }
+    .gal-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(9,9,13,0.9) 0%, transparent 55%);
+      opacity: 0; transition: opacity 0.35s;
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: var(--s3);
+    }
+    .gal-item:hover .gal-overlay { opacity: 1; }
+    .gal-tag {
+      font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); display: block; margin-bottom: 4px;
+    }
+    .gal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 15px; color: var(--cream); font-weight: 400;
+    }
+    /* logo card */
+    .gal-brand {
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      aspect-ratio: 4/3; gap: var(--s2);
+      background: var(--dark); border: 1px solid rgba(201,168,76,0.18); cursor: pointer;
+    }
+    .gal-brand img { height: 56px; width: auto; mix-blend-mode: screen; filter: brightness(1.3); }
+    .gal-brand span {
+      font-family: 'Cinzel', serif; font-size: 11px;
+      letter-spacing: 0.22em; color: rgba(244,239,230,0.6);
+    }
+
+    /* ===== FACILITIES ===== */
+    #facilities { padding: var(--s16) 0; background: var(--dark-3); }
+    .fac-header { margin-bottom: var(--s8); }
+    .fac-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s3);
+    }
+    @media (min-width: 1024px) { .fac-grid { grid-template-columns: 2fr 1fr 1fr; } }
+    .fac-card {
+      border: 1px solid rgba(201,168,76,0.15); overflow: hidden;
+      background: var(--dark-2);
+      transition: border-color 0.3s;
+    }
+    .fac-card:hover { border-color: rgba(201,168,76,0.4); }
+    .fac-card-img { position: relative; overflow: hidden; }
+    .fac-card-img img {
+      width: 100%; aspect-ratio: 16/10; object-fit: cover;
+      transition: transform 0.7s; filter: brightness(0.85);
+    }
+    .fac-card:hover .fac-card-img img { transform: scale(1.04); }
+    .fac-label {
+      position: absolute; bottom: var(--s2); left: var(--s2);
+      font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--gold); background: rgba(9,9,13,0.9);
+      backdrop-filter: blur(4px); padding: 4px var(--s1);
+      border: 1px solid rgba(201,168,76,0.25);
+    }
+    .fac-body { padding: var(--s3) var(--s4); }  /* 24 32 */
+    .fac-num { font-size: 9px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--dim); display: block; margin-bottom: var(--s1); }
+    .fac-body h3 { font-family: 'Playfair Display', serif; font-size: 1.375rem; font-weight: 400; color: var(--cream); margin-bottom: var(--s1); }
+    .fac-body p { font-size: 13px; color: var(--muted); line-height: 1.75; }
+
+    /* ===== LOCATION ===== */
+    #location { padding: var(--s16) 0; background: var(--dark-2); }
+    .loc-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--s8);
+      align-items: center;
+    }
+    @media (min-width: 1024px) { .loc-grid { grid-template-columns: 1fr 1fr; } }
+    .loc-map {
+      height: 384px; border: 1px solid rgba(201,168,76,0.18); overflow: hidden;
+    }
+    .loc-map iframe { width: 100%; height: 100%; border: none; filter: grayscale(0.25) brightness(0.8); }
+    .loc-info { display: flex; flex-direction: column; gap: var(--s4); }
+    .loc-item { display: flex; gap: var(--s2); align-items: flex-start; }
+    .loc-icon { font-size: 16px; flex-shrink: 0; margin-top: 2px; }
+    .loc-label {
+      display: block; font-size: 9px; letter-spacing: 0.22em;
+      text-transform: uppercase; color: var(--dim); margin-bottom: 2px;
+    }
+    .loc-val { font-size: 14px; color: var(--cream); }
+
+    /* ===== CONTACT ===== */
+    #contact { padding: var(--s16) 0; background: var(--dark-3); }
+    .contact-grid {
+      display: grid; grid-template-columns: 1fr; gap: var(--s8);
+    }
+    @media (min-width: 1024px) { .contact-grid { grid-template-columns: 5fr 7fr; align-items: start; } }
+    .contact-info h2 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 2.75rem); font-weight: 400; color: var(--cream); line-height: 1.2; margin-bottom: var(--s4); }
+    .contact-info h2 em { font-style: italic; color: var(--gold); }
+    .contact-info p { font-size: 14px; color: var(--muted); line-height: 1.8; margin-bottom: var(--s5); }
+    .channels { display: flex; flex-direction: column; gap: var(--s2); }
+    .ch {
+      display: flex; align-items: center; gap: var(--s2);
+      padding: var(--s2) var(--s3);
+      border: 1px solid rgba(201,168,76,0.15); background: rgba(9,9,13,0.5);
+    }
+    .ch-icon {
+      width: 40px; height: 40px; display: flex; align-items: center; justify-content: center;
+      border: 1px solid rgba(201,168,76,0.25);
+      font-size: 10px; font-weight: 700; color: var(--gold); letter-spacing: 0.04em;
+    }
+    .ch-label { display: block; font-size: 9px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--dim); }
+    .ch-val { font-size: 15px; color: var(--cream); font-weight: 500; }
+    .form-wrap {
+      background: var(--dark-2);
+      border: 1px solid rgba(201,168,76,0.18);
+      padding: var(--s5);
+    }
+    .form-wrap h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 400; color: var(--cream); margin-bottom: var(--s1); }
+    .form-wrap > p { font-size: 13px; color: var(--muted); margin-bottom: var(--s4); }
+    .fg { display: flex; flex-direction: column; gap: var(--s1); margin-bottom: var(--s2); }
+    .fg label { font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--cream); font-weight: 500; }
+    .fg input, .fg select, .fg textarea {
+      background: var(--dark); border: 1px solid rgba(201,168,76,0.18);
+      padding: 0 var(--s2); font-size: 14px; color: var(--cream);
+      font-family: 'Noto Sans Thai', sans-serif;
+      transition: border-color 0.25s; appearance: none; width: 100%;
+      height: 48px;
+    }
+    .fg textarea { height: auto; padding: var(--s2); resize: vertical; }
+    .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--gold); }
+    .fg input::placeholder, .fg textarea::placeholder { color: rgba(244,239,230,0.25); }
+    .fg select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23C9A84C' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 16px center; padding-right: 40px;
+    }
+    .fg-row { display: grid; grid-template-columns: 1fr; gap: var(--s2); }
+    @media (min-width: 480px) { .fg-row { grid-template-columns: 1fr 1fr; } }
+    .cbs { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s1); }
+    .cb {
+      display: flex; align-items: center; gap: var(--s1); padding: 0 var(--s2);
+      border: 1px solid rgba(201,168,76,0.15); background: var(--dark);
+      font-size: 13px; color: var(--cream); cursor: pointer; height: 40px;
+      transition: border-color 0.25s;
+    }
+    .cb:hover { border-color: var(--gold); }
+    .cb input { accent-color: var(--gold); }
+    .btn-submit {
+      width: 100%; height: 48px; margin-top: var(--s1);
+      background: var(--gold); color: var(--dark);
+      font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 700;
+      border: none; font-family: 'Noto Sans Thai', sans-serif; cursor: pointer;
+      transition: all 0.25s;
+    }
+    .btn-submit:hover { background: var(--gold-l); transform: translateY(-1px); }
+    .confirm {
+      margin-top: var(--s2); padding: var(--s2) var(--s3);
+      border: 1px solid var(--gold); background: rgba(201,168,76,0.05);
+      color: var(--gold); font-size: 13px; text-align: center;
+    }
+    .hidden { display: none !important; }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #050508;
+      border-top: 1px solid rgba(201,168,76,0.18);
+      padding: var(--s10) 0 var(--s4);
+    }
+    .footer-grid {
+      display: grid; grid-template-columns: 1fr; gap: var(--s6);
+      padding-bottom: var(--s6);
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+    @media (min-width: 768px)  { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
+    .footer-brand-n {
+      font-family: 'Cinzel', serif; font-size: 13px; letter-spacing: 0.18em;
+      color: var(--gold); display: block; margin-bottom: var(--s2);
+    }
+    .footer-brand p { font-size: 13px; color: var(--muted); line-height: 1.8; }
+    .footer-col-label { font-size: 9px; letter-spacing: 0.26em; text-transform: uppercase; color: rgba(201,168,76,0.7); display: block; margin-bottom: var(--s1); font-weight: 600; }
+    .footer-col p { font-size: 13px; color: var(--muted); line-height: 1.8; }
+    .footer-bottom {
+      padding-top: var(--s4);
+      display: flex; flex-direction: column; gap: var(--s1);
+      align-items: center; text-align: center;
+    }
+    @media (min-width: 640px) { .footer-bottom { flex-direction: row; justify-content: space-between; text-align: left; } }
+    .footer-bottom p { font-size: 11px; color: var(--dim); letter-spacing: 0.06em; }
+    .flinks { display: flex; gap: var(--s3); }
+    .flinks a { font-size: 11px; color: var(--dim); transition: color 0.25s; }
+    .flinks a:hover { color: var(--gold); }
+
+    /* ===== FLOAT CTA ===== */
+    .float-cta {
+      position: fixed; right: var(--s2); bottom: var(--s3);
+      z-index: 90; display: flex; flex-direction: column; gap: var(--s1);
+    }
+    .float-btn {
+      width: 48px; height: 48px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4); transition: all 0.25s;
+    }
+    .float-btn:hover { transform: scale(1.1); }
+    .f-phone { background: #e53935; }
+    .f-line  { background: #06C755; }
+
+    /* ===== LIGHTBOX ===== */
+    .lb {
+      position: fixed; inset: 0; z-index: 500;
+      background: rgba(0,0,0,0.96); backdrop-filter: blur(20px);
+      display: flex; align-items: center; justify-content: center;
+      padding: var(--s4);
+      opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    }
+    .lb.open { opacity: 1; pointer-events: all; }
+    .lb-x {
+      position: absolute; top: var(--s3); right: var(--s3);
+      font-size: 24px; color: rgba(255,255,255,0.45); cursor: pointer;
+      padding: var(--s1); transition: color 0.25s; border: none; background: none;
+    }
+    .lb-x:hover { color: white; }
+    .lb-inner { max-width: 900px; width: 100%; display: flex; flex-direction: column; align-items: center; }
+    #lb-img { max-height: 75vh; max-width: 100%; object-fit: contain; border: 1px solid rgba(201,168,76,0.25); }
+    #lb-cap {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px; color: var(--cream); text-align: center;
+      margin-top: var(--s2); font-style: italic;
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    [data-r] { opacity: 0; transform: translateY(24px); transition: opacity 0.65s, transform 0.65s; }
+    [data-r].in { opacity: 1; transform: translateY(0); }
+    [data-r][data-d="1"] { transition-delay: 0.1s; }
+    [data-r][data-d="2"] { transition-delay: 0.2s; }
+    [data-r][data-d="3"] { transition-delay: 0.3s; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="nav">
+    <div class="nav-inner">
+      <span class="nav-logo">LYRA <em>SUPREME</em> SPA</span>
+      <div class="nav-links">
+        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#highlights">จุดเด่น</a>
+        <a href="#gallery">บรรยากาศ</a>
+        <a href="#facilities">สิ่งอำนวยความสะดวก</a>
+        <a href="#location">ทำเลที่ตั้ง</a>
+        <a href="#contact">ติดต่อเรา</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <a href="#contact" class="nav-cta">สำรองคิว</a>
+        <button class="ham" id="ham" aria-label="เปิดเมนู">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="drawer-bg" id="drawer-bg"></div>
+  <div class="drawer" id="drawer">
+    <button class="drawer-close" id="drawer-close">✕</button>
+    <a href="#about">เกี่ยวกับเรา</a>
+    <a href="#highlights">จุดเด่น</a>
+    <a href="#gallery">บรรยากาศ</a>
+    <a href="#facilities">สิ่งอำนวยความสะดวก</a>
+    <a href="#location">ทำเลที่ตั้ง</a>
+    <a href="#contact">ติดต่อเรา</a>
+    <a href="#contact" class="nav-cta">สำรองคิวล่วงหน้า</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero">
+    <img src="images/LINE_ALBUM_Deluxe room_260920_1.jpg" alt="LYRA SUPREME SPA" class="hero-bg-img">
+    <div class="hero-vignette"></div>
+    <div class="hero-content">
+      <span class="hero-kicker">Gentlemen's Private Wellness Sanctuary</span>
+      <h1 class="hero-h1">LYRA<br><em>SUPREME</em><br>SPA</h1>
+      <p class="hero-p">คัดสรรอย่างพิถีพิถัน เพื่อประสบการณ์ที่พิเศษกว่า</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-fill">นัดหมายล่วงหน้า</a>
+        <a href="#gallery" class="btn-outline">ชมสถานที่จริง</a>
+      </div>
+    </div>
+    <div class="hero-scroll">
+      <span>Scroll</span>
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="about-layout">
+        <div class="about-img-stack" data-r>
+          <img
+            src="images/LINE_ALBUM_Deluxe room_260920_2.jpg"
+            alt="Deluxe Suite"
+            class="about-main-img"
+            onclick="openLb('images/LINE_ALBUM_Deluxe room_260920_2.jpg','Deluxe Suite')"
+          >
+          <div class="about-stat-pill">
+            <span class="pill-num">30+</span>
+            <span class="pill-text">Private Parking Bays</span>
+          </div>
+        </div>
+        <div class="about-text" data-r data-d="1">
+          <span class="eyebrow">Sanctuary Concept</span>
+          <h2 class="h2">พื้นที่พักผ่อนส่วนตัว<br><em>สำหรับสุภาพบุรุษ</em></h2>
+          <p class="body-p">ตั้งอยู่ในย่านลาดพร้าว 71 ใกล้เลียบทางด่วนเอกมัย–รามอินทรา เดินทางสะดวกจากลาดพร้าว รามอินทรา และพื้นที่ใกล้เคียง เหมาะสำหรับผู้ที่มองหาสถานที่คุณภาพ บรรยากาศดี และการดูแลที่เป็นมืออาชีพ พร้อมที่จอดรถรองรับมากกว่า 30 คัน</p>
+          <div class="specs">
+            <div class="spec-row">
+              <span class="spec-k">ทำเล</span>
+              <span class="spec-v">ลาดพร้าว 71 • ใกล้เลียบด่วน</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">บริการ</span>
+              <span class="spec-v">Direct-to-Suite Privacy</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">ที่จอดรถ</span>
+              <span class="spec-v">30+ คัน (ในร่ม)</span>
+            </div>
+            <div class="spec-row">
+              <span class="spec-k">เวลาทำการ</span>
+              <span class="spec-v">11:00 – 24:00 น. ทุกวัน</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights">
+    <div class="wrap">
+      <div class="hl-header" data-r>
+        <span class="eyebrow">จุดเด่น</span>
+        <h2 class="h2">LYRA <em>แตกต่าง</em><br>อย่างไร</h2>
+      </div>
+      <div class="hl-list">
+        <div class="hl-item" data-r>
+          <span class="hl-n">01</span>
+          <div class="hl-body">
+            <h3>คัดสรรบุคลากรอย่างพิถีพิถัน</h3>
+            <span class="hl-en">Curation &amp; Etiquette</span>
+            <p>เราเชื่อว่าประสบการณ์ที่ดีเริ่มต้นจาก "คนที่ใช่" จึงให้ความสำคัญกับการคัดสรรพนักงานโดยพิจารณาทั้งรูปลักษณ์ บุคลิกภาพ มารยาท และความใส่ใจ — มาตรฐานการอบรมระดับสากล</p>
+          </div>
+        </div>
+        <div class="hl-item" data-r data-d="1">
+          <span class="hl-n">02</span>
+          <div class="hl-body">
+            <h3>บริการที่ใส่ใจในทุกรายละเอียด</h3>
+            <span class="hl-en">Bespoke Attentiveness</span>
+            <p>ทีมงานพร้อมดูแลคุณด้วยความสุภาพและเป็นกันเอง เพื่อให้ทุกช่วงเวลาที่ LYRA SUPREME SPA ราบรื่น สะดวกสบาย และตรงกับความต้องการของคุณอย่างแท้จริง</p>
+          </div>
+        </div>
+        <div class="hl-item" data-r data-d="2">
+          <span class="hl-n">03</span>
+          <div class="hl-body">
+            <h3>บรรยากาศและความเป็นส่วนตัวสูงสุด</h3>
+            <span class="hl-en">Absolute Sanctuary</span>
+            <p>ออกแบบทุกตารางนิ้วเพื่อความสงบ เป็นส่วนตัว และไร้การรบกวน บรรยากาศโมเดิร์นมินิมอลโทนครีม ห้องบริการแยกเป็นสัดส่วน ไม่มีการรบกวนจากภายนอก</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="wrap">
+      <div class="gallery-top">
+        <div data-r>
+          <span class="eyebrow">บรรยากาศสถานที่จริง</span>
+          <h2 class="h2" style="font-size:clamp(1.5rem,3vw,2rem);margin-bottom:0">Real Suite Photography</h2>
+        </div>
+        <div class="tabs" data-r data-d="1">
+          <button class="tab active" onclick="flt('all',this)">ทั้งหมด</button>
+          <button class="tab" onclick="flt('d',this)">Deluxe Suite</button>
+          <button class="tab" onclick="flt('l',this)">Karaoke &amp; Lounge</button>
+        </div>
+      </div>
+      <div class="gal-grid" id="gal">
+        <div class="gal-item d" onclick="openLb('images/LINE_ALBUM_Deluxe room_260920_1.jpg','Deluxe Suite — Panoramic View')">
+          <img src="images/LINE_ALBUM_Deluxe room_260920_1.jpg" alt="Deluxe Suite 01">
+          <div class="gal-overlay">
+            <span class="gal-tag">Deluxe Suite • 01</span>
+            <span class="gal-title">Panoramic Suite</span>
+          </div>
+        </div>
+        <div class="gal-item d" onclick="openLb('images/LINE_ALBUM_Deluxe room_260920_2.jpg','Deluxe Suite — Bed &amp; Linen')">
+          <img src="images/LINE_ALBUM_Deluxe room_260920_2.jpg" alt="Deluxe Suite 02">
+          <div class="gal-overlay">
+            <span class="gal-tag">Deluxe Suite • 02</span>
+            <span class="gal-title">Headboard &amp; Linen</span>
+          </div>
+        </div>
+        <div class="gal-item d" onclick="openLb('images/LINE_ALBUM_Deluxe room_260920_3.jpg','Deluxe Suite — Workspace')">
+          <img src="images/LINE_ALBUM_Deluxe room_260920_3.jpg" alt="Deluxe Suite 03">
+          <div class="gal-overlay">
+            <span class="gal-tag">Deluxe Suite • 03</span>
+            <span class="gal-title">Suite Workspace</span>
+          </div>
+        </div>
+        <div class="gal-item l" onclick="openLb('images/karaoke-room.jpg','VIP Karaoke Lounge')">
+          <img src="images/karaoke-room.jpg" alt="Karaoke Lounge">
+          <div class="gal-overlay">
+            <span class="gal-tag" style="color:#DFC278">Entertainment</span>
+            <span class="gal-title">VIP Karaoke Lounge</span>
+          </div>
+        </div>
+        <div class="gal-item d" onclick="openLb('images/private-room.jpg','Private Treatment Suite')">
+          <img src="images/private-room.jpg" alt="Private Suite">
+          <div class="gal-overlay">
+            <span class="gal-tag">Private Suite</span>
+            <span class="gal-title">Treatment Room</span>
+          </div>
+        </div>
+        <div class="gal-brand" onclick="openLb('images/LINE_ALBUM_Logo_260911_1.jpg','LYRA SUPREME SPA')">
+          <img src="images/LINE_ALBUM_Logo_260911_1.jpg" alt="LYRA Logo">
+          <span>LYRA SUPREME SPA</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FACILITIES -->
+  <section id="facilities">
+    <div class="wrap">
+      <div class="fac-header" data-r>
+        <span class="eyebrow">สิ่งอำนวยความสะดวก</span>
+        <h2 class="h2">ครบครันทุกรายละเอียด</h2>
+      </div>
+      <div class="fac-grid">
+        <div class="fac-card" data-r>
+          <div class="fac-card-img">
+            <img src="images/LINE_ALBUM_Deluxe room_260920_1.jpg" alt="Deluxe Suite">
+            <span class="fac-label">Deluxe Private Suite</span>
+          </div>
+          <div class="fac-body">
+            <span class="fac-num">01 — Dedicated Treatment</span>
+            <h3>ห้องบริการส่วนตัว</h3>
+            <p>ห้องทรีตเมนต์ VIP แยกเป็นเอกเทศ ระบบไฟ Warm LED สะอาดถูกสุขอนามัย ความเป็นส่วนตัวสูงสุด ไม่มีการรบกวน</p>
+          </div>
+        </div>
+        <div class="fac-card" data-r data-d="1">
+          <div class="fac-card-img">
+            <img src="images/karaoke-room.jpg" alt="Karaoke">
+            <span class="fac-label" style="color:#DFC278">Entertainment Lounge</span>
+          </div>
+          <div class="fac-body">
+            <span class="fac-num">02 — Social Space</span>
+            <h3>ห้องคาราโอเกะ VIP</h3>
+            <p>ระบบเสียงคุณภาพสูง โซฟาหนัง บรรยากาศอบอุ่น เหมาะสำหรับการสังสรรค์ส่วนตัว</p>
+          </div>
+        </div>
+        <div class="fac-card" data-r data-d="2">
+          <div class="fac-card-img">
+            <img src="images/LINE_ALBUM_Deluxe room_260920_3.jpg" alt="Amenities">
+            <span class="fac-label">Full-Service Amenities</span>
+          </div>
+          <div class="fac-body">
+            <span class="fac-num">03 — Refreshment</span>
+            <h3>มินิบาร์คัดสรร</h3>
+            <p>เครื่องดื่มชั้นดี ชาสมุนไพร กาแฟสด ที่จอดรถ 30+ คัน มีระบบรักษาความปลอดภัย</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section id="location">
+    <div class="wrap">
+      <div class="loc-grid">
+        <div data-r>
+          <span class="eyebrow">ทำเลที่ตั้ง</span>
+          <h2 class="h2">ลาดพร้าว 71<br><em>ใกล้เลียบด่วน</em></h2>
+          <div class="loc-info">
+            <div class="loc-item">
+              <span class="loc-icon">📍</span>
+              <div>
+                <span class="loc-label">ที่อยู่</span>
+                <span class="loc-val">ลาดพร้าว 71 ซอยวัดหัวหมาก แขวงบึงกุ่ม กรุงเทพฯ</span>
+              </div>
+            </div>
+            <div class="loc-item">
+              <span class="loc-icon">🕐</span>
+              <div>
+                <span class="loc-label">เวลาทำการ</span>
+                <span class="loc-val">เปิดทุกวัน 11:00 – 24:00 น.</span>
+              </div>
+            </div>
+            <div class="loc-item">
+              <span class="loc-icon">🚗</span>
+              <div>
+                <span class="loc-label">ที่จอดรถ</span>
+                <span class="loc-val">ในร่ม 30+ คัน มีระบบรักษาความปลอดภัย</span>
+              </div>
+            </div>
+          </div>
+          <a href="https://maps.google.com" target="_blank" class="btn-fill" style="display:inline-flex;margin-top:32px">ดูเส้นทาง Google Maps</a>
+        </div>
+        <div class="loc-map" data-r data-d="1">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.5!2d100.6100!3d13.7900!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTPCsDQ3JzI0LjAiTiAxMDDCsDM2JzM2LjAiRQ!5e0!3m2!1sth!2sth!4v1620000000000!5m2!1sth!2sth"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="LYRA SUPREME SPA Map"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="contact-grid">
+        <div class="contact-info" data-r>
+          <span class="eyebrow">Private Concierge</span>
+          <h2>สำรองคิวล่วงหน้า<br><em>อย่างเป็นส่วนตัว</em></h2>
+          <p>ทีม Concierge พร้อมรับรองทุกท่านอย่างสุภาพและเป็นส่วนตัว ตั้งแต่การนัดหมายจนถึงการให้บริการ</p>
+          <div class="channels">
+            <div class="ch">
+              <div class="ch-icon">LINE</div>
+              <div>
+                <span class="ch-label">LINE Official</span>
+                <span class="ch-val">@LYRASPA</span>
+              </div>
+            </div>
+            <div class="ch">
+              <div class="ch-icon">TEL</div>
+              <div>
+                <span class="ch-label">โทรศัพท์</span>
+                <span class="ch-val">02-XXX-XXXX</span>
+              </div>
+            </div>
+          </div>
+          <p style="font-size:12px;color:var(--dim);font-style:italic;margin-top:24px;line-height:1.65">* ข้อมูลการสำรองคิวและประวัติการเข้าใช้บริการถูกเก็บเป็นความลับสูงสุดระดับ Concierge</p>
+        </div>
+        <div class="form-wrap" data-r data-d="1">
+          <span class="eyebrow">Private Request</span>
+          <h3>สำรองห้องและบริการล่วงหน้า</h3>
+          <p>กรอกข้อมูลเพื่อให้ทีมงานติดต่อกลับโดยเร็ว</p>
+          <form onsubmit="submitForm(event)">
+            <div class="fg">
+              <label>ชื่อหรือนามแฝง</label>
+              <input type="text" placeholder="คุณสุภาพบุรุษ" required>
+            </div>
+            <div class="fg-row">
+              <div class="fg">
+                <label>เบอร์โทรศัพท์</label>
+                <input type="tel" placeholder="08X-XXX-XXXX" required>
+              </div>
+              <div class="fg">
+                <label>LINE ID</label>
+                <input type="text" placeholder="@line_id">
+              </div>
+            </div>
+            <div class="fg-row">
+              <div class="fg">
+                <label>วันที่ต้องการ</label>
+                <input type="date" required>
+              </div>
+              <div class="fg">
+                <label>ช่วงเวลา</label>
+                <select>
+                  <option>11:00 – 14:00 น.</option>
+                  <option>14:00 – 18:00 น.</option>
+                  <option selected>18:00 – 21:00 น.</option>
+                  <option>21:00 – 24:00 น.</option>
+                </select>
+              </div>
+            </div>
+            <div class="fg">
+              <label>ห้องที่สนใจ</label>
+              <div class="cbs">
+                <label class="cb"><input type="checkbox" checked> Deluxe Suite</label>
+                <label class="cb"><input type="checkbox"> Karaoke Lounge</label>
+              </div>
+            </div>
+            <div class="fg">
+              <label>ข้อความเพิ่มเติม</label>
+              <textarea rows="3" placeholder="ระบุความต้องการเพิ่มเติม..."></textarea>
+            </div>
+            <button type="submit" class="btn-submit">ยืนยันการสำรองคิวล่วงหน้า</button>
+          </form>
+          <div id="confirm" class="confirm hidden">เจ้าหน้าที่ได้รับข้อมูลแล้ว จะติดต่อกลับโดยเร็วที่สุด</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <span class="footer-brand-n">LYRA SUPREME SPA</span>
+          <p>คัดสรรอย่างพิถีพิถัน เพื่อประสบการณ์ที่พิเศษกว่า นิยามใหม่แห่งความผ่อนคลายสำหรับสุภาพบุรุษชั้นสูง</p>
+        </div>
+        <div>
+          <span class="footer-col-label">ทำเลที่ตั้ง</span>
+          <p>ลาดพร้าว 71 ใกล้เลียบด่วน เอกมัย–รามอินทรา กรุงเทพฯ</p>
+        </div>
+        <div>
+          <span class="footer-col-label">ติดต่อ</span>
+          <p>11:00 – 24:00 น. ทุกวัน<br>LINE: @LYRASPA<br>TEL: 02-XXX-XXXX</p>
+        </div>
+        <div>
+          <span class="footer-col-label">ความเป็นส่วนตัว</span>
+          <p>ข้อมูลของคุณถูกเก็บเป็นความลับขั้นสูงสุด</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 LYRA SUPREME SPA — All Rights Reserved</p>
+        <div class="flinks">
+          <a href="#">นโยบายความเป็นส่วนตัว</a>
+          <a href="#">ข้อกำหนดการให้บริการ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="float-cta">
+    <a href="tel:02XXXXXXX" class="float-btn f-phone" aria-label="โทร">
+      <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
+    </a>
+    <a href="https://line.me/R/ti/p/@LYRASPA" target="_blank" class="float-btn f-line" aria-label="LINE">
+      <svg viewBox="0 0 24 24" fill="white" width="22" height="22"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.627.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
+    </a>
+  </div>
+
+  <!-- LIGHTBOX -->
+  <div id="lb" class="lb" onclick="if(event.target===this)closeLb()">
+    <button class="lb-x" onclick="closeLb()">&#215;</button>
+    <div class="lb-inner">
+      <img id="lb-img" src="" alt="">
+      <p id="lb-cap"></p>
+    </div>
+  </div>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // Mobile nav
+    const ham = document.getElementById('ham');
+    const drawer = document.getElementById('drawer');
+    const drawerBg = document.getElementById('drawer-bg');
+    const drawerClose = document.getElementById('drawer-close');
+    function openDrawer() {
+      ham.classList.add('open');
+      drawer.classList.add('open');
+      drawerBg.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeDrawer() {
+      ham.classList.remove('open');
+      drawer.classList.remove('open');
+      drawerBg.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    ham.addEventListener('click', () => drawer.classList.contains('open') ? closeDrawer() : openDrawer());
+    drawerBg.addEventListener('click', closeDrawer);
+    drawerClose.addEventListener('click', closeDrawer);
+    drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
+
+    // Gallery filter
+    function flt(cat, el) {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      el.classList.add('active');
+      document.querySelectorAll('#gal .gal-item, #gal .gal-brand').forEach(card => {
+        if (cat === 'all') { card.style.display = ''; return; }
+        const show = card.classList.contains(cat);
+        card.style.display = show ? '' : 'none';
+      });
+    }
+
+    // Form
+    function submitForm(e) {
+      e.preventDefault();
+      document.getElementById('confirm').classList.remove('hidden');
+    }
+
+    // Lightbox
+    function openLb(src, cap) {
+      document.getElementById('lb-img').src = src;
+      document.getElementById('lb-cap').textContent = cap;
+      document.getElementById('lb').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLb() {
+      document.getElementById('lb').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLb(); });
+
+    // Scroll reveal
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('[data-r]').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
