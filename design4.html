@@ -4,8 +4,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LYRA SUPREME SPA — Private Gentlemen's Sanctuary • ลาดพร้าว 71</title>
-  <meta name="description" content="LYRA SUPREME SPA พื้นที่พักผ่อนส่วนตัวสำหรับสุภาพบุรุษ บรรยากาศโมเดิร์นมินิมอล ห้องบริการแยกเป็นสัดส่วน ลาดพร้าว 71 ใกล้เลียบทางด่วนเอกมัย–รามอินทรา ที่จอดรถ 30+ คัน โทร 096-639-9949">
+  <title>LYRA SUPREME SPA | สปาและนวดผ่อนคลาย ลาดพร้าว 71</title>
+  <meta name="description" content="LYRA SUPREME SPA สปาและบริการนวดผ่อนคลาย ย่านลาดพร้าว 71 ห้องบริการส่วนตัว สะอาด เป็นสัดส่วน ที่จอดรถ 30+ คัน เปิดทุกวัน 09:00–01:00 น. สอบถามและจองคิวผ่าน LINE OA หรือโทร 096-639-9949">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LYRA SUPREME SPA | สปาและนวดผ่อนคลาย ลาดพร้าว 71">
+  <meta property="og:description" content="ห้องบริการส่วนตัว สะอาด เป็นสัดส่วน ที่จอดรถ 30+ คัน สอบถามและจองคิวผ่าน LINE OA">
+  <meta property="og:image" content="images/hero-massage.jpg">
+
+  <!-- ===== TRACKING: ใส่ ID จริงตรงนี้ที่เดียว (เว้นว่าง = ยังไม่โหลด) =====
+       LINE OA = Conversion หลัก / Phone + Maps = Conversion รอง -->
+  <script>
+    window.LYRA_TRACKING = {
+      GA4_ID: '',          // 'G-XXXXXXXXXX'
+      ADS_ID: '',          // 'AW-XXXXXXXXX'
+      ADS_LABELS: { line: '', phone: '', maps: '' }
+    };
+    (function(t){
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      var id = t.GA4_ID || t.ADS_ID; if (!id) return;
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + id; document.head.appendChild(s);
+      gtag('js', new Date());
+      if (t.GA4_ID) gtag('config', t.GA4_ID);
+      if (t.ADS_ID) gtag('config', t.ADS_ID);
+    })(window.LYRA_TRACKING);
+  </script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"DaySpa","name":"LYRA SUPREME SPA",
+   "description":"สปาและบริการนวดผ่อนคลาย ย่านลาดพร้าว 71","telephone":"+66966399949",
+   "address":{"@type":"PostalAddress","streetAddress":"86/1 ซอยลาดพร้าว 73","addressLocality":"เขตวังทองหลาง","addressRegion":"กรุงเทพมหานคร","postalCode":"10310","addressCountry":"TH"},
+   "openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"09:00","closes":"01:00"}]}
+  </script>
   <meta name="robots" content="index, follow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -114,6 +144,45 @@
       @keyframes cstBreatheSm{0%,100%{opacity:.18}50%{opacity:.3}}
       .sky .cst.hide-sm{display:none}
     }
+
+    /* ===== V4 FINAL (2026-10-14) ===== */
+    #hero-section .hero-img{object-position:center 35%}
+    #hero-section .hero-overlay{
+      background:radial-gradient(circle at center,rgba(12,10,9,.12) 0%,rgba(12,10,9,.6) 100%),
+                 linear-gradient(180deg,rgba(12,10,9,.25) 0%,rgba(12,10,9,.45) 55%,rgba(12,10,9,.92) 100%);
+    }
+    .hero-headline{font-family:'Prompt',sans-serif;font-size:clamp(24px,4vw,44px);font-weight:500;line-height:1.3;color:#fff;
+      margin-bottom:var(--s-2);text-shadow:0 4px 20px rgba(0,0,0,.85)}
+    .hero-headline .nw{display:inline-block}
+    .btn-line-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:12px 28px;
+      border-radius:9999px;background:#06C755;color:#fff;font-weight:600;font-size:16px;line-height:1.35;text-align:center;
+      box-shadow:0 6px 20px rgba(6,199,85,.28);transition:all .3s ease}
+    .btn-line-cta:hover{background:#07e063;transform:translateY(-2px)}
+    .btn-line-cta.big{min-height:60px;font-size:18px;padding:14px 36px}
+    .btn-pill-outline svg,.btn-line-cta svg{flex:none}
+    .btn-reserve.is-line{background:#06C755;border-color:#06C755;color:#fff}
+    .btn-reserve.is-line:hover{background:#07e063}
+    .location-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:2rem}
+    .location-cta .btn-primary{margin-top:0!important}
+    .booking-main-cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:var(--s-5) 0 var(--s-2)}
+    .btn-call-outline{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:60px;padding:0 30px;border-radius:9999px;
+      border:1px solid var(--gold);color:var(--gold);font-weight:500;font-size:17px;transition:all .3s ease}
+    .btn-call-outline:hover{background:var(--gold);color:#1a0a05}
+    .header-nav a{white-space:nowrap}
+    /* Mobile first: แถบ LINE + โทร ติดล่างจอ */
+    .mobile-sticky-cta{display:none}
+    @media (max-width:767px){
+      .floating-cta{display:none}
+      .mobile-sticky-cta{display:grid;grid-template-columns:1fr 2fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:95;
+        padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:rgba(12,10,9,.97);border-top:1px solid var(--gold-dim)}
+      .mobile-sticky-cta a{display:flex;align-items:center;justify-content:center;gap:8px;height:48px;border-radius:9999px;font-weight:600;font-size:15px}
+      .mobile-sticky-cta .m-call{border:1px solid var(--gold);color:var(--gold)}
+      .mobile-sticky-cta .m-line{background:#06C755;color:#fff}
+      body{padding-bottom:72px}
+      .disclaimer-badge{bottom:calc(var(--s-10) + 8px)}
+      .hero-cta a{width:100%}
+      .header-actions .btn-reserve.is-line{display:none}
+    }
   </style>
 </head>
 
@@ -157,6 +226,8 @@
         <g fill="currentColor"><circle cx="30" cy="170" r="6"/><circle cx="110" cy="120" r="8"/><circle cx="200" cy="150" r="6"/><circle cx="120" cy="30" r="5"/><circle cx="60" cy="60" r="2"/></g>
         <use href="#spark" x="200" y="10" width="60" height="60"/>
       </symbol>
+      <symbol id="ico-line" viewBox="0 0 24 24"><path fill="currentColor" d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.627.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></symbol>
+      <symbol id="ico-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></symbol>
     </defs>
   </svg>
 
@@ -165,7 +236,7 @@
     <div class="header-inner">
       <a href="#" class="header-logo">
         <div class="logo-emblem">
-          <img src="images/LINE_ALBUM_Logo_260911_1.jpg" alt="LYRA SUPREME SPA Logo">
+          <img src="images/LINE_ALBUM_Logo_260911_1.jpg" alt="โลโก้ LYRA SUPREME SPA">
         </div>
         <div class="logo-text">
           <span class="logo-name">LYRA SUPREME SPA</span>
@@ -183,9 +254,9 @@
       <div class="header-actions">
         <div class="header-concierge">
           <span class="concierge-label">Direct Concierge</span>
-          <span class="concierge-value">โทร 096-639-9949</span>
+          <a href="tel:0966399949" class="concierge-value" data-track="phone">โทร 096-639-9949</a>
         </div>
-        <a href="#reservation" class="btn-reserve">สำรองคิว</a>
+        <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="btn-reserve is-line" data-track="line">จองคิวผ่าน LINE OA</a>
         <button class="hamburger" id="hamburger" aria-label="เปิดเมนู">
           <span></span><span></span><span></span>
         </button>
@@ -203,15 +274,15 @@
     <a href="#facilities" class="mobile-nav-link">สิ่งอำนวยความสะดวก</a>
     <a href="#location" class="mobile-nav-link">ทำเลที่ตั้ง</a>
     <a href="#reservation" class="mobile-nav-link">ติดต่อเรา</a>
-    <a href="#reservation" class="btn-reserve mobile-reserve">สำรองคิวล่วงหน้า</a>
+    <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="btn-reserve mobile-reserve is-line" data-track="line">สอบถาม / จองคิวผ่าน LINE OA</a>
   </div>
 
   <main>
 
-    <!-- HERO (แบบ Design 3) — รอรูปจริงจากลูกค้า แทน images/pazo-models-hero.jpg -->
+    <!-- 1) HERO — V4: ภาพ Hero ใหม่จากลูกค้า -->
     <section id="hero-section">
       <div class="hero-bg">
-        <img src="images/pazo-models-hero.jpg" alt="LYRA SUPREME SPA" class="hero-img">
+        <img src="images/hero-massage.jpg" alt="บริการนวดผ่อนคลาย LYRA SUPREME SPA ลาดพร้าว 71" class="hero-img" fetchpriority="high">
         <div class="hero-overlay"></div>
       </div>
       <div class="sky" aria-hidden="true">
@@ -219,12 +290,13 @@
         <svg class="cst breathe delay hide-sm" style="bottom:18%;left:6%;width:150px;height:127px"><use href="#cst-small"/></svg>
       </div>
       <div class="hero-content">
-        <h1 class="hero-main-title">LYRA</h1>
-        <p class="hero-sub-title">EXCLUSIVE MEN SPA</p>
-        <p class="hero-desc">พื้นที่พักผ่อนส่วนตัวสำหรับสุภาพบุรุษ<br>สัมผัสประสบการณ์การพักผ่อนที่เป็นส่วนตัว ในบรรยากาศโมเดิร์นมินิมอล พร้อมบริการที่ใส่ใจในทุกรายละเอียด</p>
+        <p class="hero-main-title">LYRA</p>
+        <p class="hero-sub-title">MEN'S MASSAGE &amp; RELAXATION SPA</p>
+        <h1 class="hero-headline"><span class="nw">สปาและบริการนวดผ่อนคลาย</span> <span class="nw">ย่านลาดพร้าว 71</span></h1>
+        <p class="hero-desc">พื้นที่สำหรับการพักผ่อนในบรรยากาศที่เป็นส่วนตัว พร้อมห้องบริการที่สะอาด สะดวกสบาย และเป็นสัดส่วน</p>
         <div class="hero-cta">
-          <a href="#reservation" class="btn-pill-white">นัดหมายล่วงหน้า</a>
-          <a href="#gallery" class="btn-pill-outline">ชมสถานที่จริง</a>
+          <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="btn-line-cta" data-track="line"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><use href="#ico-line"/></svg>สอบถามรายละเอียดผ่าน LINE OA</a>
+          <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="btn-pill-outline" data-track="line">จองคิวผ่าน LINE OA</a>
         </div>
       </div>
       <span class="disclaimer-badge">นางแบบในภาพใช้สำหรับถ่ายทำเพื่อการโฆษณาเท่านั้น</span>
@@ -244,10 +316,10 @@
         <div class="about-grid">
           <div class="about-left">
             <span class="section-tag">SANCTUARY CONCEPT</span>
-            <h2 class="section-title">พื้นที่พักผ่อนส่วนตัว<br><em>สำหรับสุภาพบุรุษ</em></h2>
+            <h2 class="section-title"><span style="display:inline-block">สปาและ</span><span style="display:inline-block">นวดผ่อนคลาย</span><br><em>ในพื้นที่ส่วนตัว</em></h2>
             <div class="about-body">
-              <p>LYRA SUPREME SPA ตั้งอยู่ในย่านลาดพร้าว 71 ใกล้เลียบทางด่วนเอกมัย–รามอินทรา เดินทางสะดวกจากลาดพร้าว รามอินทรา และพื้นที่ใกล้เคียง เหมาะสำหรับผู้ที่มองหาสถานที่คุณภาพ บรรยากาศดี และการดูแลที่เป็นมืออาชีพ พร้อมที่จอดรถรองรับมากกว่า 30 คัน เพิ่มความสะดวกสบายตั้งแต่เดินทางมาถึง</p>
-              <p class="about-quote">คัดสรรอย่างพิถีพิถัน เพื่อประสบการณ์ที่พิเศษกว่า</p>
+              <p>LYRA SUPREME SPA ให้บริการนวดผ่อนคลายในบรรยากาศที่เป็นส่วนตัว พร้อมห้องบริการแยกเป็นสัดส่วน เพื่อความสะดวกสบายตลอดการใช้บริการ ตั้งอยู่ย่านลาดพร้าว 71 ใกล้เลียบทางด่วนเอกมัย–รามอินทรา เดินทางสะดวก พร้อมที่จอดรถรองรับมากกว่า 30 คัน</p>
+              <p class="about-quote">Private &amp; Comfortable Massage Rooms</p>
             </div>
             <div class="about-stats">
               <div class="stat-row">
@@ -265,16 +337,16 @@
             </div>
           </div>
           <div class="about-right">
-            <div class="about-img-main" onclick="openLightbox('images/LINE_ALBUM_Deluxe room_260920_2.jpg','Deluxe Room Bed and Amenities Detail')">
-              <img src="images/LINE_ALBUM_Deluxe room_260920_2.jpg" alt="Deluxe Room">
+            <div class="about-img-main" onclick="openLightbox('images/room-2.jpg','Deluxe Room Bed and Amenities Detail')">
+              <img src="images/room-2.jpg" alt="ห้องบริการ Deluxe เตียงและผ้าขนหนูสะอาด" loading="lazy">
               <div class="img-caption">
                 <span class="img-caption-title">Deluxe Bed and Embroidered Linen</span>
                 <span class="img-caption-sub">ชุดผ้าขนหนูปักแบรนด์ และเตียงนอนสะอาดได้มาตรฐาน</span>
               </div>
             </div>
             <div class="about-img-duo">
-              <div class="about-img-small" onclick="openLightbox('images/LINE_ALBUM_Deluxe room_260920_3.jpg','Deluxe Suite Workspace')">
-                <img src="images/LINE_ALBUM_Deluxe room_260920_3.jpg" alt="Suite Workspace">
+              <div class="about-img-small" onclick="openLightbox('images/room-3.jpg','Deluxe Suite Workspace')">
+                <img src="images/room-3.jpg" alt="ภายในห้องบริการ Deluxe" loading="lazy">
               </div>
               <div class="about-stat-card">
                 <span class="stat-card-num">30+</span>
@@ -290,7 +362,7 @@
     <!-- HIGHLIGHTS -->
     <section id="highlights" class="section-highlights">
       <div class="hero-bg">
-        <img src="images/hero-bg.jpg" alt="Background" class="hero-img">
+        <img src="images/room-1.jpg" alt="" class="hero-img" loading="lazy">
         <div class="highlights-overlay"></div>
       </div>
       <div class="sky" aria-hidden="true">
@@ -300,15 +372,15 @@
         <div class="highlights-header">
           <span class="section-tag light">DISTINCTIVE STANDARDS</span>
           <h2 class="section-title light">จุดเด่นของเรา</h2>
-          <p class="section-desc light">หัวใจสำคัญที่ทำให้ LYRA SUPREME SPA เป็นหมุดหมายสำหรับสุภาพบุรุษที่แสวงหาความประณีต</p>
+          <p class="section-desc light">สิ่งที่เราให้ความสำคัญ เพื่อให้คุณพักผ่อนได้อย่างสบายใจทุกครั้งที่มาใช้บริการ</p>
         </div>
         <div class="highlights-list">
           <div class="highlight-item">
             <span class="highlight-num">01</span>
             <div class="highlight-body">
-              <h3>คัดสรรบุคลากรอย่างพิถีพิถัน</h3>
-              <span class="highlight-en">Curation &amp; Etiquette</span>
-              <p>เราเชื่อว่าประสบการณ์ที่ดีเริ่มต้นจาก “คนที่ใช่” จึงให้ความสำคัญกับการคัดสรรพนักงาน โดยพิจารณาทั้งรูปลักษณ์ บุคลิกภาพ มารยาท และความใส่ใจ เพื่อให้คุณได้รับการดูแลอย่างสุภาพ เป็นธรรมชาติ และน่าประทับใจ ตั้งแต่ก้าวแรกที่เข้ามาใช้บริการ</p>
+              <h3>ห้องบริการส่วนตัวและเป็นสัดส่วน</h3>
+              <span class="highlight-en">Private &amp; Comfortable Massage Rooms</span>
+              <p>ห้องบริการแยกเป็นสัดส่วน สะอาด และสะดวกสบาย ให้คุณผ่อนคลายได้อย่างเต็มที่ในบรรยากาศที่เป็นส่วนตัว ตลอดช่วงเวลาที่ใช้บริการ</p>
             </div>
           </div>
           <div class="highlight-item">
@@ -316,16 +388,16 @@
             <div class="highlight-body">
               <h3>บริการที่ใส่ใจในทุกรายละเอียด</h3>
               <span class="highlight-en">Bespoke Attentiveness</span>
-              <p>ทีมงานของเราพร้อมดูแลคุณด้วยความสุภาพและเป็นกันเอง เพื่อให้ทุกช่วงเวลาที่ LYRA SUPREME SPA เป็นไปอย่างราบรื่น สะดวกสบาย และตรงกับความต้องการของคุณ</p>
+              <p>ทีมงานพร้อมดูแลด้วยความสุภาพและเป็นกันเอง ตั้งแต่การสอบถามรายละเอียดผ่าน LINE OA ไปจนถึงวันที่มาใช้บริการ เพื่อให้ทุกขั้นตอนเป็นไปอย่างราบรื่น</p>
             </div>
           </div>
           <div class="highlight-item">
             <span class="highlight-num">03</span>
             <div class="highlight-body">
-              <h3>บรรยากาศและความเป็นส่วนตัว</h3>
-              <span class="highlight-en">Absolute Sanctuary</span>
-              <p>สัมผัสบรรยากาศโมเดิร์นมินิมอลที่เรียบง่าย สะอาด และสบายตา พร้อมห้องบริการที่แยกเป็นสัดส่วน ช่วยให้คุณผ่อนคลายได้อย่างเต็มที่ในบรรยากาศที่เป็นส่วนตัว ไม่วุ่นวาย และสะดวกสบายตลอดช่วงเวลาที่ใช้บริการ</p>
-              <div class="highlight-tag">ผ่อนคลายในพื้นที่ที่ออกแบบมาเพื่อคุณ</div>
+              <h3>ทำเลสะดวก ที่จอดรถกว้าง</h3>
+              <span class="highlight-en">Easy Access &amp; Parking 30+</span>
+              <p>ตั้งอยู่ย่านลาดพร้าว 71 ใกล้เลียบทางด่วนเอกมัย–รามอินทรา เดินทางสะดวก พร้อมที่จอดรถรองรับมากกว่า 30 คัน และเปิดให้บริการทุกวัน 09:00–01:00 น.</p>
+              <div class="highlight-tag">เราให้ความสำคัญกับความเป็นส่วนตัวของลูกค้า</div>
             </div>
           </div>
         </div>
@@ -343,18 +415,18 @@
           <div class="gallery-header-left">
             <span class="section-tag">REAL SUITE PHOTOGRAPHY</span>
             <h2 class="section-title">บรรยากาศสถานที่จริง</h2>
-            <p class="section-desc">ชมภาพบรรยากาศจริงภายในห้องพัก Deluxe Suite และสิ่งอำนวยความสะดวก ที่ออกแบบคุมโทนสีครีมเพื่อความเป็นส่วนตัวและสุนทรียภาพสูงสุด</p>
+            <p class="section-desc">ภาพบรรยากาศภายในห้อง Deluxe Suite ห้องบริการ และพื้นที่คาราโอเกะ ของ LYRA SUPREME SPA</p>
           </div>
           <div class="gallery-filters">
             <button onclick="filterGallery('all', this)" class="gallery-tab active" id="tab-all">ทั้งหมด</button>
             <button onclick="filterGallery('deluxe', this)" class="gallery-tab" id="tab-deluxe">Deluxe Suite</button>
-            <button onclick="filterGallery('lounge', this)" class="gallery-tab" id="tab-lounge">Karaoke &amp; Lounge</button>
+            <button onclick="filterGallery('lounge', this)" class="gallery-tab" id="tab-lounge">Karaoke Space</button>
           </div>
         </div>
         <div class="gallery-grid" id="gallery-grid">
-          <div class="gallery-card deluxe" onclick="openLightbox('images/LINE_ALBUM_Deluxe room_260920_1.jpg','Deluxe Room - Panoramic Suite View')">
+          <div class="gallery-card deluxe" onclick="openLightbox('images/room-1.jpg','Deluxe Room - Panoramic Suite View')">
             <div class="gallery-card-img">
-              <img src="images/LINE_ALBUM_Deluxe room_260920_1.jpg" alt="Deluxe Room 1">
+              <img src="images/room-1.jpg" alt="ห้อง Deluxe Suite มุมที่ 1" loading="lazy">
               <div class="gallery-card-overlay">
                 <span class="gallery-card-tag">Deluxe Suite • View 01</span>
                 <h3>Panoramic Suite &amp; Warm Backlight</h3>
@@ -365,9 +437,9 @@
               <span class="zoom-icon">&#8853;</span>
             </div>
           </div>
-          <div class="gallery-card deluxe" onclick="openLightbox('images/LINE_ALBUM_Deluxe room_260920_2.jpg','Deluxe Room - Bed Linen and TV Console')">
+          <div class="gallery-card deluxe" onclick="openLightbox('images/room-2.jpg','Deluxe Room - Bed Linen and TV Console')">
             <div class="gallery-card-img">
-              <img src="images/LINE_ALBUM_Deluxe room_260920_2.jpg" alt="Deluxe Room 2">
+              <img src="images/room-2.jpg" alt="ห้อง Deluxe Suite มุมที่ 2" loading="lazy">
               <div class="gallery-card-overlay">
                 <span class="gallery-card-tag">Deluxe Suite • View 02</span>
                 <h3>Headboard LED &amp; Towel Service</h3>
@@ -378,9 +450,9 @@
               <span class="zoom-icon">&#8853;</span>
             </div>
           </div>
-          <div class="gallery-card deluxe" onclick="openLightbox('images/LINE_ALBUM_Deluxe room_260920_3.jpg','Deluxe Room - Dining and Relaxation')">
+          <div class="gallery-card deluxe" onclick="openLightbox('images/room-3.jpg','Deluxe Room - Dining and Relaxation')">
             <div class="gallery-card-img">
-              <img src="images/LINE_ALBUM_Deluxe room_260920_3.jpg" alt="Deluxe Room 3">
+              <img src="images/room-3.jpg" alt="ห้อง Deluxe Suite มุมที่ 3" loading="lazy">
               <div class="gallery-card-overlay">
                 <span class="gallery-card-tag">Deluxe Suite • View 03</span>
                 <h3>Suite Workspace &amp; Ambient Table</h3>
@@ -391,12 +463,12 @@
               <span class="zoom-icon">&#8853;</span>
             </div>
           </div>
-          <div class="gallery-card lounge" onclick="openLightbox('images/karaoke-room.jpg','Exclusive VIP Karaoke Lounge')">
+          <div class="gallery-card lounge" onclick="openLightbox('images/karaoke.jpg','Karaoke Space')">
             <div class="gallery-card-img">
-              <img src="images/karaoke-room.jpg" alt="Karaoke Lounge">
+              <img src="images/karaoke.jpg" alt="พื้นที่คาราโอเกะ" loading="lazy">
               <div class="gallery-card-overlay">
-                <span class="gallery-card-tag" style="color:#C5A059">Entertainment • Lounge</span>
-                <h3>VIP Karaoke &amp; Audio Lounge</h3>
+                <span class="gallery-card-tag" style="color:#C5A059">Facility • Karaoke</span>
+                <h3>Karaoke Space</h3>
               </div>
             </div>
             <div class="gallery-card-footer">
@@ -404,12 +476,12 @@
               <span class="zoom-icon">&#8853;</span>
             </div>
           </div>
-          <div class="gallery-card deluxe" onclick="openLightbox('images/private-room.jpg','Private Treatment Sanctuary')">
+          <div class="gallery-card deluxe" onclick="openLightbox('images/private-room.jpg','Private Treatment Room')">
             <div class="gallery-card-img">
-              <img src="images/private-room.jpg" alt="Private Sanctuary">
+              <img src="images/private-room.jpg" alt="ห้องบริการนวดส่วนตัว" loading="lazy">
               <div class="gallery-card-overlay">
-                <span class="gallery-card-tag">Treatment • Private Suite</span>
-                <h3>Private Hydro &amp; Treatment Room</h3>
+                <span class="gallery-card-tag">Treatment • Private Room</span>
+                <h3>Private Treatment Room</h3>
               </div>
             </div>
             <div class="gallery-card-footer">
@@ -417,10 +489,18 @@
               <span class="zoom-icon">&#8853;</span>
             </div>
           </div>
-          <div class="gallery-card brand-card" onclick="openLightbox('images/LINE_ALBUM_Logo_260911_1.jpg','LYRA SUPREME SPA Official Brand Emblem')">
-            <img src="images/LINE_ALBUM_Logo_260911_1.jpg" alt="LYRA Logo" class="brand-logo">
-            <span class="brand-name">LYRA SUPREME SPA</span>
-            <span class="brand-sub">Gentlemen's Private Sanctuary</span>
+          <div class="gallery-card parking" onclick="openLightbox('images/parking.jpg','ลานจอดรถ รองรับมากกว่า 30 คัน')">
+            <div class="gallery-card-img">
+              <img src="images/parking.jpg" alt="ลานจอดรถ LYRA SUPREME SPA รองรับมากกว่า 30 คัน" loading="lazy">
+              <div class="gallery-card-overlay">
+                <span class="gallery-card-tag">Facility • Parking</span>
+                <h3>Parking 30+ Cars</h3>
+              </div>
+            </div>
+            <div class="gallery-card-footer">
+              <span>คลิกเพื่อดูรูปขยาย</span>
+              <span class="zoom-icon">&#8853;</span>
+            </div>
           </div>
         </div>
       </div>
@@ -438,12 +518,12 @@
             <span class="section-tag">SPACES &amp; COMFORT</span>
             <h2 class="section-title">สิ่งอำนวยความสะดวกครบครัน</h2>
           </div>
-          <p class="section-desc">เติมเต็มช่วงเวลาพักผ่อนของคุณด้วยสิ่งอำนวยความสะดวกที่คัดสรรมาอย่างเหมาะสม ทุกองค์ประกอบได้รับการจัดเตรียมเพื่อมอบความสะดวกสบาย และทำให้ช่วงเวลาพิเศษของคุณน่าประทับใจยิ่งขึ้น</p>
+          <p class="section-desc">ห้องบริการแยกเป็นสัดส่วน พร้อมสิ่งอำนวยความสะดวกที่จัดเตรียมไว้ เพื่อให้คุณพักผ่อนได้อย่างสะดวกสบายตลอดการใช้บริการ</p>
         </div>
         <div class="facilities-showcase">
-          <div class="facility-large" onclick="openLightbox('images/LINE_ALBUM_Deluxe room_260920_1.jpg','LYRA Private Suite')">
+          <div class="facility-large" onclick="openLightbox('images/room-1.jpg','LYRA Private Suite')">
             <div class="facility-img">
-              <img src="images/LINE_ALBUM_Deluxe room_260920_1.jpg" alt="ห้องบริการ">
+              <img src="images/room-1.jpg" alt="ห้องบริการส่วนตัว Deluxe" loading="lazy">
               <div class="facility-badge">Deluxe Private Suite</div>
             </div>
             <div class="facility-info">
@@ -452,15 +532,15 @@
               <p>ห้องบริการแยกเป็นสัดส่วน ช่วยให้คุณผ่อนคลายได้อย่างเต็มที่ในบรรยากาศที่เป็นส่วนตัว ไม่วุ่นวาย</p>
             </div>
           </div>
-          <div class="facility-medium" onclick="openLightbox('images/karaoke-room.jpg','LYRA VIP Karaoke Lounge')">
+          <div class="facility-medium" onclick="openLightbox('images/karaoke.jpg','พื้นที่คาราโอเกะ')">
             <div class="facility-img">
-              <img src="images/karaoke-room.jpg" alt="ห้องคาราโอเกะ">
-              <div class="facility-badge" style="color:#C5A059">Entertainment Lounge</div>
+              <img src="images/karaoke.jpg" alt="พื้นที่คาราโอเกะ" loading="lazy">
+              <div class="facility-badge" style="color:#C5A059">Facility • Karaoke</div>
             </div>
             <div class="facility-info">
-              <span class="facility-num">02 • Exclusive Social Space</span>
-              <h3>ห้องคาราโอเกะ</h3>
-              <p>ห้องคาราโอเกะสำหรับผ่อนคลายและสังสรรค์ ในบรรยากาศที่เป็นส่วนตัว</p>
+              <span class="facility-num">02 • สิ่งอำนวยความสะดวกเสริม</span>
+              <h3>พื้นที่คาราโอเกะ</h3>
+              <p>พื้นที่คาราโอเกะสำหรับผ่อนคลาย เป็นสิ่งอำนวยความสะดวกเสริมระหว่างการพักผ่อน</p>
             </div>
           </div>
         </div>
@@ -487,7 +567,7 @@
     <!-- LOCATION -->
     <section id="location" class="section-location">
       <div class="hero-bg">
-        <img src="images/hero-bg.jpg" alt="Location Background" class="hero-img">
+        <img src="images/parking.jpg" alt="ลานจอดรถ LYRA SUPREME SPA" class="hero-img" loading="lazy">
         <div class="location-overlay"></div>
       </div>
       <div class="sky" aria-hidden="true">
@@ -511,7 +591,7 @@
                 <span class="detail-icon">&#9742;</span>
                 <div>
                   <span class="detail-label">โทรศัพท์</span>
-                  <span class="detail-value"><a href="tel:0966399949">096-639-9949</a></span>
+                  <span class="detail-value"><a href="tel:0966399949" data-track="phone">096-639-9949</a></span>
                 </div>
               </div>
               <div class="location-detail-item">
@@ -529,13 +609,16 @@
                 </div>
               </div>
             </div>
-            <a href="https://share.google/4P4Qplnn9H9LoRFlg" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;margin-top:2rem">ดูเส้นทาง Google Maps</a>
+            <div class="location-cta">
+              <a href="https://share.google/4P4Qplnn9H9LoRFlg" target="_blank" rel="noopener" class="btn-primary" data-track="maps">เปิด Google Maps</a>
+              <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="btn-line-cta" data-track="line"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><use href="#ico-line"/></svg>สอบถามผ่าน LINE OA</a>
+            </div>
           </div>
           <div class="location-map">
             <iframe
               src="https://www.google.com/maps?q=Lyra+Spa%2C+86%2F1+Soi+Lat+Phrao+73%2C+Saphan+Song%2C+Wang+Thonglang%2C+Bangkok+10310&amp;hl=th&amp;z=16&amp;output=embed"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="LYRA SUPREME SPA Location Map">
+              title="แผนที่ LYRA SUPREME SPA ลาดพร้าว">
             </iframe>
           </div>
         </div>
@@ -552,18 +635,22 @@
       <div class="container">
         <div class="reservation-solo">
           <span class="section-tag">CONTACT &amp; BOOKING</span>
-          <h2 class="section-title">ติดต่อและจองบริการ<br><em>สำรองคิวได้แล้ววันนี้</em></h2>
-          <p class="section-desc">ติดต่อทีมงานเพื่อสอบถามรายละเอียด เลือกบริการ หรือสำรองคิวล่วงหน้าได้แล้ววันนี้ เราพร้อมให้ข้อมูลและดูแลคุณอย่างสุภาพ เพื่อให้ทุกการมาเยือนเป็นช่วงเวลาที่น่าประทับใจ</p>
+          <h2 class="section-title">สอบถามรายละเอียด / จองคิว<br><em>ล่วงหน้าอย่างเป็นส่วนตัว</em></h2>
+          <p class="section-desc">สอบถามรายละเอียดบริการ ราคา และคิวว่าง หรือจองคิวล่วงหน้าได้ทาง LINE OA ทีมงานพร้อมให้ข้อมูลทุกวัน</p>
+          <div class="booking-main-cta">
+            <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="btn-line-cta big" data-track="line"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><use href="#ico-line"/></svg>สอบถามรายละเอียด / จองคิวผ่าน LINE OA</a>
+            <a href="tel:0966399949" class="btn-call-outline" data-track="phone"><svg width="18" height="18" aria-hidden="true"><use href="#ico-phone"/></svg>โทรหาเรา</a>
+          </div>
           <div class="contact-cards">
-            <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="contact-card is-line">
+            <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="contact-card is-line" data-track="line">
               <span class="channel-icon">LINE</span>
               <div>
-                <span class="channel-label">LINE Official</span>
+                <span class="channel-label">LINE OA</span>
                 <span class="channel-value">@878hjjoo</span>
               </div>
               <span class="card-cta">แอดไลน์ →</span>
             </a>
-            <a href="tel:0966399949" class="contact-card">
+            <a href="tel:0966399949" class="contact-card" data-track="phone">
               <span class="channel-icon">&#9742;</span>
               <div>
                 <span class="channel-label">โทรศัพท์</span>
@@ -572,7 +659,7 @@
               <span class="card-cta">โทรเลย →</span>
             </a>
           </div>
-          <p class="privacy-note">ติดต่อเราเพื่อจองบริการและสัมผัสประสบการณ์การพักผ่อนที่พิเศษกว่า</p>
+          <p class="privacy-note">เราให้ความสำคัญกับความเป็นส่วนตัวของลูกค้า</p>
         </div>
       </div>
     </section>
@@ -593,29 +680,29 @@
             </div>
             <div class="logo-text">
               <span class="logo-name">LYRA SUPREME SPA</span>
-              <span class="logo-sub">Private Gentlemen's Sanctuary</span>
+              <span class="logo-sub">Men's Massage &amp; Relaxation Spa</span>
             </div>
           </div>
-          <p>คัดสรรอย่างพิถีพิถัน เพื่อประสบการณ์ที่พิเศษกว่า</p>
+          <p>สปาและบริการนวดผ่อนคลาย ย่านลาดพร้าว 71</p>
         </div>
         <div class="footer-col">
           <span class="footer-col-title">ทำเลที่ตั้ง &amp; ที่จอดรถ</span>
-          <p>86/1 ซอยลาดพร้าว 73 แขวงสะพานสอง เขตวังทองหลาง กรุงเทพฯ 10310<br>ใกล้เลียบทางด่วนเอกมัย–รามอินทรา พร้อมที่จอดรถรองรับมากกว่า 30 คัน<br><a href="https://share.google/4P4Qplnn9H9LoRFlg" target="_blank" rel="noopener">ดูแผนที่ Google Maps</a></p>
+          <p>86/1 ซอยลาดพร้าว 73 แขวงสะพานสอง เขตวังทองหลาง กรุงเทพฯ 10310<br>ใกล้เลียบทางด่วนเอกมัย–รามอินทรา พร้อมที่จอดรถรองรับมากกว่า 30 คัน<br><a href="https://share.google/4P4Qplnn9H9LoRFlg" target="_blank" rel="noopener" data-track="maps">ดูแผนที่ Google Maps</a></p>
         </div>
         <div class="footer-col">
           <span class="footer-col-title">เวลาทำการ &amp; ข้อมูลติดต่อ</span>
-          <p>เปิดทุกวัน 09:00 – 01:00 น.<br>โทร: <a href="tel:0966399949">096-639-9949</a><br>LINE: <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener">@878hjjoo</a></p>
+          <p>เปิดทุกวัน 09:00 – 01:00 น.<br>โทร: <a href="tel:0966399949" data-track="phone">096-639-9949</a><br>LINE OA: <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" data-track="line">@878hjjoo</a></p>
         </div>
         <div class="footer-col">
           <span class="footer-col-title">มาตรฐานความเป็นส่วนตัว</span>
-          <p>ข้อมูลการรับบริการและการนัดหมายถูกเก็บรักษาอย่างเป็นความลับขั้นสูงสุด</p>
+          <p>เราให้ความสำคัญกับความเป็นส่วนตัวของลูกค้า<br><a href="privacy.html">นโยบายความเป็นส่วนตัว</a></p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>2025 LYRA SUPREME SPA. All Rights Reserved. สงวนลิขสิทธิ์ทุกประการ</p>
+        <p>© 2026 LYRA SUPREME SPA. สงวนลิขสิทธิ์ทุกประการ</p>
         <div class="footer-links">
-          <a href="#">นโยบายความเป็นส่วนตัว</a>
-          <a href="#">ข้อกำหนดการให้บริการ</a>
+          <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+          <a href="terms.html">ข้อกำหนดและเงื่อนไข</a>
         </div>
       </div>
     </div>
@@ -623,10 +710,10 @@
 
   <!-- FLOATING CTA (Pazo Spa style) -->
   <div class="floating-cta">
-    <a href="tel:0966399949" class="float-btn float-phone" aria-label="โทรหาเรา">
+    <a href="tel:0966399949" class="float-btn float-phone" aria-label="โทรหาเรา" data-track="phone">
       <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M6.62 10.79a15.05 15.05 0 006.59 6.59l2.2-2.2a1 1 0 011.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 011 1V20a1 1 0 01-1 1C9.61 21 3 14.39 3 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.57 3.57a1 1 0 01-.25 1.02l-2.2 2.2z"/></svg>
     </a>
-    <a href="https://lin.ee/5OHZEoA" target="_blank" class="float-btn float-line" aria-label="แอดไลน์ LYRA SUPREME SPA">
+    <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="float-btn float-line" aria-label="แอดไลน์ LYRA SUPREME SPA" data-track="line">
       <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.627.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.281.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.070 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/></svg>
     </a>
   </div>
@@ -640,7 +727,22 @@
     </div>
   </div>
 
+  <!-- MOBILE STICKY: โทร + LINE OA -->
+  <div class="mobile-sticky-cta">
+    <a href="tel:0966399949" class="m-call" data-track="phone"><svg width="18" height="18" aria-hidden="true"><use href="#ico-phone"/></svg>โทร</a>
+    <a href="https://lin.ee/5OHZEoA" target="_blank" rel="noopener" class="m-line" data-track="line"><svg width="18" height="18" aria-hidden="true"><use href="#ico-line"/></svg>สอบถาม / จองผ่าน LINE OA</a>
+  </div>
+
   <script src="app.js"></script>
+  <script>
+    /* Conversion tracking: data-track="line" (หลัก) | "phone" | "maps" (รอง) */
+    document.addEventListener('click', function (e) {
+      var el = e.target.closest('[data-track]'); if (!el) return;
+      var type = el.getAttribute('data-track'), t = window.LYRA_TRACKING || {};
+      gtag('event', type + '_click', { link_url: el.href || '', section: (el.closest('section,header,footer') || {}).id || '' });
+      if (t.ADS_ID && t.ADS_LABELS && t.ADS_LABELS[type]) gtag('event', 'conversion', { send_to: t.ADS_ID + '/' + t.ADS_LABELS[type] });
+    }, true);
+  </script>
 </body>
 
 </html>
